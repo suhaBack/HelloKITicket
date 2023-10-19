@@ -1,0 +1,18 @@
+#Header{
+  /* border: 1px solid; */
+  width: 100%;
+  height: 50px;
+}
+#Header h1{
+  float: left;
+}
+#Login li{
+  float: right;
+  padding: 0px 1em;
+}
+
+#ManuBar ul li{
+  /* border: 1px solid; */
+  float: left;
+  padding: 0px 1em 0px;
+}
