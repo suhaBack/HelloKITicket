@@ -1,33 +1,54 @@
-#footer {
-  width: 1200px;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 5%;
-  /* border-top : solid 1px black; */
+/* Base styles for the Footer */
+#kitiket-down {
+    background-color: #333;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#footer ul, sapn {
-  display: flex;
-  padding: 16px 0;
+/* Wrapper for content to ensure a max width and left alignment */
+.kitiket-content-wrapper {
+    max-width: 800px;
+    width: 90%;
+    text-align: left;
 }
 
-#footer span, ul li {
-  padding: 10px 300px;
-  line-height: 1;
+/* Styles for the footer-copy section */
+#kitiket-footer-copy {
+    margin-bottom: 25px;
 }
 
-#footer-copy ul li:not(:last-child) {
-  border-right: 1px solid #ccc;
+#kitiket-footer-copy ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
-#footer-address span {
-  padding: 0px 10px;
-  border-right: 1px solid #ccc;
+#kitiket-footer-copy li {
+    margin-right: 25px;
+    padding: 5px 0;
+    transition: color 0.3s;
 }
 
-/* 각 줄의 마지막 <span>에 대해 border-right 스타일을 없애기 */
-#footer-address span:nth-child(3),
-#footer-address span:nth-child(6),
-#footer-address span:nth-child(8) {
-    border-right: none;
+#kitiket-footer-copy li:hover {
+    color: #fff;
+}
+
+/* Styles for the footer-address section */
+#kitiket-footer-address span {
+    display: block;
+    margin: 5px 0;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+#kitiket-footer-address span:first-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
