@@ -1,19 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
-import "../css/header.css"
+import "../css/header.css";
 
 const Header = () => {
-  return(
+  return (
     <>
       <div id="Header">
-        <h1>Melon 티켓</h1>
+        <h1>Melon 티켓asdf</h1>
         <input type="text" placeholder="검색창"></input>
-        <AiOutlineSearch size={22} id="search-icon"/>
+        <AiOutlineSearch size={22} id="search-icon" />
         <nav id="Login">
           <ul>
-            <li><NavLink to="/login">로그인</NavLink></li>
-            <li><NavLink to="/join">회원가입</NavLink></li>
+            <li>
+              <NavLink to="/login">로그인</NavLink>
+            </li>
+            <li>
+              <NavLink to="/join">회원가입</NavLink>
+            </li>
           </ul>
         </nav>
       </div>
@@ -34,7 +38,7 @@ const Header = () => {
         </nav>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Header;
