@@ -1,7 +1,7 @@
-import React from 'react';
-import "./signup.css";
+import './register.css'
+import { Link } from "react-router-dom";
 
-const Signup = () => {
+function Register() {
   return (
     <form className="sform">
       <h3>회원가입</h3>
@@ -18,7 +18,11 @@ const Signup = () => {
 
       <div className="form-group">
         <label>비밀번호 확인</label>
-        <input type="email" className="form-control" placeholder="Confirm Password" />
+        <input
+          type="email"
+          className="form-control"
+          placeholder="Confirm Password"
+        />
       </div>
 
       <div className="form-group">
@@ -33,22 +37,28 @@ const Signup = () => {
 
       <div className="form-group">
         <label>전화번호</label>
-        <input type="password" className="form-control" placeholder="Phone number" />
+        <input
+          type="password"
+          className="form-control"
+          placeholder="Phone number"
+        />
       </div>
 
       <div>
-        <div><button type="submit" className="btn-signup">
-          가입하기
-        </button></div>
+        <div>
+          <button type="submit" className="btn-signup">
+            가입하기
+          </button>
+        </div>
       </div>
-      
+
       <p>
-        계정이 있으신가요? <a href="/sign-in">로그인</a>
+        계정이 있으신가요? <Link to="/login">로그인</Link>
       </p>
-      
+
       <button className="home-btn">홈으로 돌아가기</button>
     </form>
-  )
+  );
 }
 
-export default Signup;
+export default Register;

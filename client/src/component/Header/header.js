@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "./header.css";
 import { FaTicketAlt } from "react-icons/fa";
+import { useState } from "react";
 
 function Header() {
+  let [loginTrue, setLoginTrue] = useState(false);
+
   return (
     <>
       <div className="title">
@@ -15,28 +18,40 @@ function Header() {
           </div>
         </Link>
         <div className="titleInputBox">
-          <input></input>
+          <input placeholder="어떤 공연을 보고 싶으세요?"></input>
           <span className="serchIcon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </span>
         </div>
-        <div className="navLogin">
-          <Link
-            className="loginBtn"
-            to="/login"
-            style={{ textDecoration: "none" }}
-          >
-            로그인
-          </Link>
-          /
-          <Link
-            className="registerBtn"
-            to="/register"
-            style={{ textDecoration: "none" }}
-          >
-            회원가입
-          </Link>
-        </div>
+        {loginTrue ? (
+          <div className="navLogin">
+            <Link
+              className="loginBtn"
+              to="/mypage"
+              style={{ textDecoration: "none" }}
+            >
+              마이페이지
+            </Link>
+          </div>
+        ) : (
+          <div className="navLogin">
+            <Link
+              className="loginBtn"
+              to="/login"
+              style={{ textDecoration: "none" }}
+            >
+              로그인
+            </Link>
+            /
+            <Link
+              className="registerBtn"
+              to="/register"
+              style={{ textDecoration: "none" }}
+            >
+              회원가입
+            </Link>
+          </div>
+        )}
       </div>
 
       <div className="menuNav">

@@ -13,20 +13,20 @@ function Main() {
   return (
     <div className="mainBg">
       <ScrollToTopButton></ScrollToTopButton>
-      <div className="mainDiv container">
-        <div style={{marginBottom: '6vw'}}>
+      <div className="mainDiv">
+        <div style={{margin: '0vw 2vw 5vw 2vw'}}>
           <Carousel></Carousel>
         </div>
-        <div className="mb-5">
+        <div className="mb-5 container">
           <UiSelect></UiSelect>
         </div>
-        <div className="mb-5">
+        <div className="mb-5 container">
           <Add/>
         </div>
-        <div className="mb-5">
+        <div className="mb-5 container">
           <Category/>
         </div>
-        <div className="lastMain pb-5">
+        <div className="lastMain pb-5 container">
           <Mainvideo/>
           <Expexted></Expexted>
         </div>
