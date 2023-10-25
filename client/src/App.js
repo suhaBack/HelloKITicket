@@ -9,7 +9,8 @@ import Theme from "./component/Pages/theme.js";
 import Ranking from "./component/Pages/ranking.js";
 import Event from "./component/Pages/event.js";
 import Login from "./component/Pages/login.js";
-import Signup from "./component/Pages/signup.js";
+import Register from "./component/Pages/register/register.js";
+import Mypage from "./component/Pages/mypage.js";
 import Footer from "./component/Footer/footer.js";
 import { Routes, Route } from "react-router-dom";
 
@@ -27,7 +28,8 @@ function App() {
         <Route path="/ranking" element={<Ranking></Ranking>}></Route>
         <Route path="/event" element={<Event></Event>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/signup" element={<Signup></Signup>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/mypage" element={<Mypage></Mypage>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

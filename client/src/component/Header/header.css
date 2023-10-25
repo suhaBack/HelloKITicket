@@ -48,14 +48,16 @@
   width: 35%;
   margin: 0 2vw;
   border: 0.5vw solid rgb(234, 93, 114);
-  border-radius: 10px;
+  border-radius: 1vw;
 }
 
 .titleInputBox input {
+  font-family: "DNFBitBitv2";
   width: 90%;
   padding: 0.5vw;
   border: none;
   border-radius: 1vw;
+  font-size: 1.3vw;
 }
 
 .titleInputBox input:focus {
