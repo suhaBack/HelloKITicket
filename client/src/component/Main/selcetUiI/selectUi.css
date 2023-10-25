@@ -1,0 +1,57 @@
+.selcetNav {
+  font-family: "DNFBitBitv2";
+  font-size: 1.5vw
+}
+
+.nav {
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: rgb(246, 144, 159);
+  --bs-nav-link-hover-color: rgb(234, 93, 114);
+  --bs-nav-link-disabled-color: rgb(249, 179, 189);
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-tabs {
+  text-shadow: 1px 1px 1px gray;
+  --bs-nav-tabs-border-width: var(--bs-border-width);
+  --bs-nav-tabs-border-color: rgb(226, 48, 74);
+  --bs-nav-tabs-border-radius: var(--bs-border-radius);
+  --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg)
+    var(--bs-secondary-bg) rgb(226, 48, 74);
+  --bs-nav-tabs-link-active-color: rgb(246, 89, 112);
+  --bs-nav-tabs-link-active-bg: #fcfcfc;
+  --bs-nav-tabs-link-active-border-color: rgb(226, 48, 74) rgb(226, 48, 74) var(--bs-body-bg);
+  border-bottom: var(--bs-nav-tabs-border-width) solid rgb(226, 48, 74);
+}
+
+.selcetBox {
+  display: flex;
+  justify-content: space-around;
+  border-left: 1px solid rgb(226, 48, 74);
+  border-right: 1px solid rgb(226, 48, 74);
+  border-bottom: 1px solid rgb(226, 48, 74);
+  border-radius: 0 0px 5px 5px;
+  padding: 2vw 0;
+  background-color: #fcfcfc;
+}
+
+.selcetBox img {
+  width: 25%;
+  height: 25vw;
+  padding: 0 1.5vw;
+}
+
+.start {
+  opacity: 0;
+}
+
+.end {
+  opacity: 1;
+  transition: all 0.5s;
+}

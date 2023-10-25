@@ -1,0 +1,114 @@
+.menuNav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border-top: 0.3vw solid rgb(234, 93, 114);
+  border-bottom: 0.3vw solid rgb(234, 93, 114);
+  background-color: #fedfdf;
+}
+
+.menuNav a {
+  text-decoration: none;
+  color: rgb(234, 93, 114);
+  font-family: "DNFBitBitv2";
+  font-size: 1.5vw;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.hello {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: "DNFBitBitv2";
+  font-size: 2.2vw;
+  padding: 1.5vw;
+}
+
+.titleIcon {
+  font-size: 2.8vw;
+  padding-right: 0.5vw;
+}
+
+.kiticket {
+  color: rgb(226, 48, 74);
+  font-family: "DNFBitBitv2";
+  font-size: 2.2vw;
+  padding-left: 0.5vw;
+}
+
+.titleInputBox {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  margin: 0 2vw;
+  border: 0.5vw solid rgb(234, 93, 114);
+  border-radius: 10px;
+}
+
+.titleInputBox input {
+  width: 90%;
+  padding: 0.5vw;
+  border: none;
+  border-radius: 1vw;
+}
+
+.titleInputBox input:focus {
+  outline: none;
+}
+
+.serchIcon {
+  margin-left: 0.5vw;
+  font-size: 1.7vw;
+  cursor: pointer;
+}
+
+.navLogin {
+  width: 35%;
+  text-align: end;
+  color: rgb(234, 93, 114);
+  font-family: "DNFBitBitv2";
+  font-size: 1.5vw;
+}
+
+.loginBtn {
+  color: rgb(234, 93, 114);
+  padding-right: 0.5vw;
+}
+
+.registerBtn {
+  color: rgb(234, 93, 114);
+  padding-left: 0.5vw;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fedfdf;
+  border-right: 0.2vw solid rgb(234, 93, 114);
+  padding: 1vw 0;
+  transition: all 0.3s;
+}
+
+.menu:hover {
+  background-color: rgb(253, 197, 205);
+}
+
+.lastmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fedfdf;
+  padding: 1vw 0;
+  transition: all 0.3s;
+}
+
+.lastmenu:hover {
+  background-color: rgb(253, 197, 205);
+}
