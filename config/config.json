@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "qwe123",
-    "database": "foodingDB",
+    "database": "HelloKITicket",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

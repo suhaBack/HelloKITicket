@@ -1,0 +1,33 @@
+#footer {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 5%;
+  border-top : solid 1px black;
+}
+
+#footer ul, sapn {
+  display: flex;
+  padding: 16px 0;
+}
+
+#footer span, ul li {
+  padding: 0 30px;
+  line-height: 1;
+}
+
+#footer-copy ul li:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+#footer-address span {
+  padding: 0px 10px;
+  border-right: 1px solid #ccc;
+}
+
+/* 각 줄의 마지막 <span>에 대해 border-right 스타일을 없애기 */
+#footer-address span:nth-child(3),
+#footer-address span:nth-child(6),
+#footer-address span:nth-child(8) {
+    border-right: none;
+}
