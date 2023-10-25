@@ -23,7 +23,7 @@ function Main() {
         <div className="mb-5 container">
           <Add/>
         </div>
-        <div className="mb-5 container">
+        <div className="container">
           <Category/>
         </div>
         <div className="lastMain pb-5 container">

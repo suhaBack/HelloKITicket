@@ -89,12 +89,8 @@
 }
 
 .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #fedfdf;
   border-right: 0.2vw solid rgb(234, 93, 114);
-  padding: 1vw 0;
   transition: all 0.3s;
 }
 
@@ -103,9 +99,6 @@
 }
 
 .lastmenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #fedfdf;
   padding: 1vw 0;
   transition: all 0.3s;
@@ -113,4 +106,20 @@
 
 .lastmenu:hover {
   background-color: rgb(253, 197, 205);
+}
+
+.menu a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.lastmenu a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }

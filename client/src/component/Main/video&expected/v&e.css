@@ -67,7 +67,7 @@ video{
 .expextedListBox{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1vw
+  gap: 2vw
 }
 
 .expextedList{
@@ -86,5 +86,5 @@ video{
   text-align: center;
   padding: 0.5vw;
   background-color: #fedfdf;
-  font-size: 1vw;
+  font-size: 0.8vw;
 }
