@@ -4,6 +4,8 @@ const app = express();
 const morgan = require('morgan');
 const index = path.join(__dirname, 'client/build/index.html')
 
+const { sequelize } = require('./models')
+
 
 app.set('view engine', 'html');
 
@@ -24,6 +26,18 @@ app.use(cors());
 app.get('/', (req,res) => {
   res.sendFile(index)
 });
+
+sequelize.sync({ force: true })
+  .then(() => {
+    console.log("DB연결 성공");
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+app.get('*',(req,res,next)=>{
+  res.sendFile(index)
+})
 
 app.listen(8080, function () {
   console.log('8080에서 대기중')
