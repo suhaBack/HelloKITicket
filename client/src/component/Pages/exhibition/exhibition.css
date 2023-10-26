@@ -1,0 +1,151 @@
+.exhibitionBg {
+  background-color: #f9eeee;
+}
+
+.exhibition {
+  font-family: "DNFBitBitv2";
+  padding-bottom: 5vw;
+}
+
+.exhibitionBtnBox {
+  padding: 0.8vw 0;
+  border-radius: 5px;
+}
+
+.exhibitionBtnBox i {
+  font-size: 1.5vw;
+  border: 1px solid black;
+  padding: 0.8vw;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #fffafa;
+}
+
+.fa-bars{
+  border-radius: 5px 0 0 5px;
+}
+
+.fa-table-cells-large{
+  border-radius:  0 5px 5px 0;
+}
+
+.exhibitionBtnBox i:hover {
+  border: 1px solid rgb(226, 48, 74);
+  color: rgb(226, 48, 74);
+}
+
+.exhibitionBox1 {
+  padding:  0.5vw 1vw 1vw 1vw;
+  border: 0.2vw solid rgb(226, 48, 74);
+  border-radius: 5px;
+  background-color: #fffafa;
+}
+
+.exhibitionBox1Header {
+  display: grid;
+  grid-template-columns: 1.4fr 5fr 2fr 2fr;
+  text-align: center;
+  font-size: 1.5vw;
+  border-bottom: 0.2vw solid rgb(234, 93, 114);
+  padding: 0.5vw
+}
+
+.exhibitionBox1card {
+  display: grid;
+  grid-template-columns: 1.4fr 5fr 2fr 2fr;
+  padding: 1vw 0;
+  border-bottom: 0.2vw solid rgb(234, 93, 114);
+}
+
+.exhibitionBox1Title {
+  padding: 2vw;
+  font-size: 2vw;
+}
+
+.exhibitionBox1Date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+}
+
+.exhibitionBox1Location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+}
+
+.exhibitionBox1card img {
+  width: 100%;
+  height: 15vw;
+  box-shadow: 3px 3px 3px  gray;
+}
+
+.exhibitionBox1 .exhibitionBox1card:last-child {
+  border: none;
+}
+
+
+
+
+
+.exhibitionBox2 {
+  padding: 1vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+  border: 0.2vw solid rgb(226, 48, 74);
+  background-color: #fae4e4;
+  border-radius: 5px;
+}
+
+.exhibitionCard {
+  cursor: pointer;
+  border: 0.2vw solid rgb(234, 125, 142);
+  border-radius: 5px;
+  padding: 1vw;
+  background-color: #fffafa;
+  box-shadow: 3px 3px 3px  gray;
+}
+
+.exhibitionCard img {
+  width: 100%;
+  height: 25vw;
+}
+
+.exhibitionTitle {
+  padding-top: 1vw;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.exhibitionLocation {
+  font-size: 1.2vw;
+  text-align: center;
+  color: rgb(66, 66, 66)
+}
+
+.exhibitionDate {
+  font-size: 1.2vw;
+  text-align: center;
+  color: rgb(66, 66, 66)
+}
+
+@media screen and (max-width: 1023px) {
+  .exhibitionBox2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .exhibitionBox2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vw;
+  }
+
+  .exhibitionCard img {
+    width: 100%;
+    height: 40vw;
+  }
+}
