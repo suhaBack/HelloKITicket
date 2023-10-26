@@ -4,7 +4,7 @@ import Main from "./component/Main/main.js";
 import Concert from "./component/Pages/concert.js";
 import Musical from "./component/Pages/musical.js";
 import Classic from "./component/Pages/classic.js";
-import Exhibition from "./component/Pages/exhibition.js";
+import Exhibition from "./component/Pages/exhibition/exhibition.js";
 import Theme from "./component/Pages/theme.js";
 import Ranking from "./component/Pages/ranking.js";
 import Event from "./component/Pages/event.js";

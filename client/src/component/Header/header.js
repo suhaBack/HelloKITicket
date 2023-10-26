@@ -77,7 +77,7 @@ function Header() {
           <Link to="/ranking">랭킹</Link>
         </div>
         <div className="lastmenu">
-          <Link to="/event">이벤트</Link>
+          <Link to="/event">공지사항</Link>
         </div>
       </div>
     </>

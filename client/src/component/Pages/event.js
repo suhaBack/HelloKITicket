@@ -1,7 +1,7 @@
 function Event(){
   return (
     <div className='mainDiv'>
-      이벤트 페이지
+      공지사항 페이지
     </div>
   )
 }
