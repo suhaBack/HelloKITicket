@@ -67,11 +67,32 @@
   margin: 0 1vw;
   border-bottom: 0.2vw solid rgb(234, 93, 114);
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.exhibitionBox1card:hover {
-  background-color: #eed1d1;
+.exhibitionBox1Intro,
+.exhibitionBox1Date,
+.exhibitionBox1Location {
+  transition: background-color 0.3s ease; /* 배경색 변경이 0.3초 동안 부드럽게 일어남 */
+}
+
+.exhibitionBox1Img  {
+  transition: box-shadow 0.3s ease; /* 배경색 변경이 0.3초 동안 부드럽게 일어남 */
+}
+
+.exhibitionBox1card:hover .exhibitionBox1Img {
+  box-shadow: none; /* 원하는 배경색으로 변경하세요 */
+}
+
+.exhibitionBox1card:hover .exhibitionBox1Intro {
+  background-color: rgb(249, 195, 203); /* 원하는 배경색으로 변경하세요 */
+}
+
+.exhibitionBox1card:hover .exhibitionBox1Date {
+  background-color: rgb(249, 195, 203); /* 원하는 배경색으로 변경하세요 */
+}
+
+.exhibitionBox1card:hover .exhibitionBox1Location {
+  background-color: rgb(249, 195, 203); /* 원하는 배경색으로 변경하세요 */
 }
 
 .exhibitionBox1Intro {
@@ -98,6 +119,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5vw;
+  border-radius: 0 1vw 1vw 0;
 }
 
 .exhibitionBox1card img {
