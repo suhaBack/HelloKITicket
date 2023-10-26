@@ -9,5 +9,13 @@ router.get('/',async (req,res,next)=>{
     next(error);
   }
 })
+.post('/',async (req,res,next)=>{
+  try {
+    console.log('wlq');
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
+})
 
 module.exports = router;
