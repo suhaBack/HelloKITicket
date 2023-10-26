@@ -26,14 +26,13 @@ app.use(express.json());
 var cors = require('cors');
 // 브라우저 cors 이슈를 막기 위해 사용(모든 브라우저의 요청을 일정하게 받겠다)
 app.use(cors());
+app.use('/user', userRouter)
+app.use('/event', eventRouter)
 
 
 app.get('/', (req,res) => {
   res.sendFile(index)
 });
-
-app.use('/user', userRouter)
-app.use('/event', eventRouter)
 
 sequelize.sync({ force: true })
   .then(() => {

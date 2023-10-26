@@ -1,6 +1,6 @@
 import "./register.css";
 import { Link, useNavigate } from "react-router-dom";
-import { API_URL } from "../../../../config/constansts";
+// import { API_URL } from "../../../../config/constansts";
 import axios from "axios"
 
 function Register() {
@@ -15,13 +15,13 @@ function Register() {
     const phone = e.target.Nphone.value
     if (id,pwd,name,email,phone != "") {
       if (pwd === CKpwd) {
-        await axios.post(`${API_URL}/user`,{id, pwd, name, email, phone})
+        await axios.post(`/user`,{id, pwd, name, email, phone})
         .then(() => {
           console.log('회원가입');
           navigate('/')
         })
         .catch(err => {
-          console.error(err);
+          console.error(err)
         }) 
       }else{
         return alert('비밀번호가 다릅니다')

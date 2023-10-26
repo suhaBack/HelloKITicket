@@ -1,9 +1,9 @@
 import React from 'react';
 import "./concert.css";
-import concert1 from "../Main/images/concert1.jpg";
-import concert2 from "../Main/images/concert2.jpg";
-import concert3 from "../Main/images/concert3.jpg";
-import concert4 from "../Main/images/concert4.png";
+import concert1 from "../Main/images/1.jpg";
+import concert2 from "../Main/images/2.jpg";
+import concert3 from "../Main/images/3.jpg";
+import concert4 from "../Main/images/4.jpg";
 
 function Concert(){
   return (
