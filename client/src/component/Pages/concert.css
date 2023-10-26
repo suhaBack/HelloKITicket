@@ -1,0 +1,179 @@
+.mainDiv {
+  margin: 0 auto;
+  width: 1200px;
+  height: 1200px;
+  position: relative;
+
+  /* border: 1px solid #000; */
+}
+
+.jsw_listlogo{
+  font-size: 25px;
+  font-weight: 700;
+  color: pink;
+
+
+  padding-top: 2%;
+  padding-bottom: 1%;
+
+  padding-left: 15px;
+
+  /* border: 1px solid #000; */
+}
+
+#jsw_toplist {
+  width: 100%;
+  height: 500px;
+  
+  /* border: 1px solid #000; */
+}
+
+.jsw_list{
+  float: left;
+  width: 25%;
+  height: 100%;
+
+  /* border: 1px solid #000; */
+}
+
+.jsw_listname {
+  /* padding-top: 5px; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  margin: auto;
+  text-align: center;
+
+  width: 80%;
+  height: 10%;
+
+  padding-top: 10px;
+
+  font-size: large;
+  font-weight: bold;
+  
+  /* border: 1px solid #000; */
+
+
+}
+
+.jsw_listimg{
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  
+  /* border: 1px solid #000; */
+  /* background-image: url(../Main/images/concert1.jpg); */
+}
+
+.jsw_listimg > img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.jsw_listexplanation{
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  height: 10%;
+
+  opacity: 0.6;
+
+  /* border: 1px solid #000; */
+}
+
+/* 중간 카테고리 메뉴*/
+.jsw_midlist{
+clear: both;
+
+  width: 90%;
+  height: 50px;
+  padding-top: 10px;
+  
+  
+  
+  border: 1px solid #000;  
+}
+
+.jsw_midlist > ul {
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.jsw_midlist > ul > li{
+  padding-left: 40px;
+  list-style: none;
+  
+
+  float: left;
+  border: 1px solid #000;
+}
+
+.jsw_midlist > ul> li > a{
+  color: black;
+  text-decoration: none;
+  
+}
+
+.jsw_midlist > ul> li > a:hover{
+  
+    color: pink;
+}
+
+/* 메인부분 인기순, 공연임박순 등 */
+.jsw_mainlist{
+  clear: both;
+
+  border: 1px solid #000;
+}
+/* 메인 이미지 나열 */
+.jsw_jswmain{
+
+
+  border: 1px solid #000;
+}
+
+/* 메인 리스트 */
+
+#jsw_mainlist {
+  width: 100%;
+  height: 400px;
+
+  border: 1px solid #000;
+}
+
+.jsw_list_main{
+  width: 25%;
+  height: 100%;
+
+  border: 1px solid #000;
+}
+
+.jsw_listimg_main{
+  width: 100%;
+  height: 80%;
+
+  border: 1px solid #000;
+}
+
+.jsw_listname_main{
+  padding: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 10%;
+  
+  border: 1px solid #000;
+}
+
+.jsw_listexplanation_main{
+  text-align: center;
+  width: 100%;
+  height: 10%;
+
+  border: 1px solid #000;
+}
+
+
