@@ -1,25 +1,55 @@
 import "./register.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+// import { API_URL } from "../../../../config/constansts";
+import axios from "axios"
 
 function Register() {
+  const navigate = useNavigate()
+  const NewUser = async (e) => {
+    e.preventDefault();
+    const id = e.target.Nid.value
+    const pwd = e.target.Npwd.value
+    const CKpwd = e.target.CKpwd.value;
+    const email = e.target.Nemail.vlue
+    const name = e.target.Nname.value
+    const phone = e.target.Nphone.value
+    if (id,pwd,name,email,phone != "") {
+      if (pwd === CKpwd) {
+        await axios.post(`/user`,{id, pwd, name, email, phone})
+        .then(() => {
+          console.log('로그인');
+          navigate('/')
+        })
+        .catch(err => {
+          console.error(err);
+        }) 
+      }else{
+        return alert('비밀번호가 다릅니다')
+      }
+    }else{
+      return alert("전부 입력해주세요");
+    }
+  }
+{/* ID PWD EMAIL NAME PHONE */}
   return (
-    <form className="sform">
+    <form className="sform" onSubmit={NewUser}>
       <h3>회원가입</h3>
 
       <div className="form-group">
         <label>아이디</label>
-        <input type="text" className="form-control" placeholder="ID" />
+        <input id="Nid" type="text" className="form-control" placeholder="ID" />
       </div>
 
       <div className="form-group">
         <label>비밀번호</label>
-        <input type="text" className="form-control" placeholder="Password" />
+        <input id="Npwd" type="password" className="form-control" placeholder="Password" />
       </div>
 
       <div className="form-group">
         <label>비밀번호 확인</label>
         <input
-          type="email"
+          id="CKpwd"
+          type="password"
           className="form-control"
           placeholder="Confirm Password"
         />
@@ -27,18 +57,19 @@ function Register() {
 
       <div className="form-group">
         <label>이메일</label>
-        <input type="password" className="form-control" placeholder="Email" />
+        <input id="Nemail" type="password" className="form-control" placeholder="Email" />
       </div>
 
       <div className="form-group">
         <label>이름</label>
-        <input type="password" className="form-control" placeholder="Name" />
+        <input id="Nname" type="text" className="form-control" placeholder="Name" />
       </div>
 
       <div className="form-group">
         <label>전화번호</label>
         <input
-          type="password"
+          id="Nphone"
+          type="text"
           className="form-control"
           placeholder="Phone number"
         />

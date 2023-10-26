@@ -2,7 +2,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const morgan = require('morgan');
+
 const index = path.join(__dirname, 'client/build/index.html')
+const port = process.env.NODE_ENV || '3000';
+
+const userRouter = require('./routes/User')
+const eventRouter = require('./routes/Event')
 
 const { sequelize } = require('./models')
 
@@ -27,6 +32,9 @@ app.get('/', (req,res) => {
   res.sendFile(index)
 });
 
+app.use('/user', userRouter)
+app.use('/event', eventRouter)
+
 sequelize.sync({ force: true })
   .then(() => {
     console.log("DB연결 성공");
@@ -39,6 +47,6 @@ app.get('*',(req,res,next)=>{
   res.sendFile(index)
 })
 
-app.listen(8080, function () {
-  console.log('8080에서 대기중')
+app.listen(port, function () {
+  console.log(`${port}에서 대기중`)
 }); 

@@ -2,10 +2,16 @@ import { Link } from "react-router-dom";
 import "./header.css";
 import { FaTicketAlt } from "react-icons/fa";
 import { useState } from "react";
+import Modal from "react-modal";
 
 function Header() {
   let [loginTrue, setLoginTrue] = useState(false);
+  let [modalIsOpen, setModalIsOpen] = useState(false);
 
+  const onLogin = ()=>{
+    console.log('로그인');
+  }
+  
   return (
     <>
       <div className="title">
@@ -37,8 +43,8 @@ function Header() {
           <div className="navLogin">
             <Link
               className="loginBtn"
-              to="/login"
               style={{ textDecoration: "none" }}
+              onClick={()=>{setModalIsOpen(true)}}
             >
               로그인
             </Link>
@@ -52,6 +58,14 @@ function Header() {
             </Link>
           </div>
         )}
+        <Modal className="loginModal" isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+          <form onSubmit={onLogin}>
+            <input type="text" placeholder="ID" />
+            <input type="password" placeholder="PASSWORD"></input>
+            <button type="submit">로그인</button>
+            <button onClick={()=>{setModalIsOpen(false)}}>취소</button>
+          </form>
+        </Modal>
       </div>
 
       <div className="menuNav">
