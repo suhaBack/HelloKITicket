@@ -29,6 +29,122 @@ function Exhibition() {
     jpg12,
   ]);
 
+  let [monthExhibition, setmonthExhibition] = useState([
+    {
+      id: 1,
+      title: "타겟",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 2,
+      title: "스즈메의 문단속",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 3,
+      title: "놉",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 4,
+      title: "백두산",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+  ]);
+  let [exhibition, setExhibition] = useState([
+    {
+      id: 1,
+      title: "타겟",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 2,
+      title: "스즈메의 문단속",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 3,
+      title: "놉",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 4,
+      title: "백두산",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 5,
+      title: "범죄와의 전쟁",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 6,
+      title: "부산행",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 7,
+      title: "롤드컵",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 8,
+      title: "반도",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 9,
+      title: "군함도",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 10,
+      title: "1987",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 11,
+      title: "부산행",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+    {
+      id: 12,
+      title: "Sahrryock",
+      startDate: "2023-10-27",
+      endDate: "2023-11-30",
+      location: "서울특별시 송파구",
+    },
+  ]);
   let [ui, setUi] = useState(1);
   const maxLength = 12; // 원하는 최대 길이 설정
   const originalText = [
@@ -56,7 +172,19 @@ function Exhibition() {
   return (
     <div className="exhibitionBg">
       <div className="exhibition container">
-        <div className="mainTitle">전시회</div>
+        <div className="mainTitle">이달의 전시회</div>
+        <div className="mb-5 monthExhibitionBox">
+          {monthExhibition.map((a, i) => {
+            return (
+              <div className="exhibitionCard">
+                <img src={img[i]}></img>
+                <div className="exhibitionTitle container">{monthExhibition[i].title}</div>
+                <div className="exhibitionLocation container">{monthExhibition[i].location}</div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mainTitle">전체 전시회</div>
         <div className="exhibitionBtnBox">
           <i
             className="fa-solid fa-bars"
@@ -84,9 +212,23 @@ function Exhibition() {
               return (
                 <div className="exhibitionBox1card">
                   <img src={img[i]}></img>
-                  <div className="exhibitionBox1Title">공연명</div>
-                  <div className="exhibitionBox1Date">공연일시</div>
-                  <div className="exhibitionBox1Location">공연장소</div>
+                  <div className="exhibitionBox1Intro">
+                    <div className="exhibitionBox1Title">
+                      {exhibition[i].title}
+                    </div>
+                    <div className="exhibitionBox1Content">
+                      - 전시회 간단한 설명
+                    </div>
+                  </div>
+
+                  <div className="exhibitionBox1Date">
+                    {exhibition[i].startDate}
+                    <br />~<br />
+                    {exhibition[i].endDate}
+                  </div>
+                  <div className="exhibitionBox1Location">
+                    {exhibition[i].location}
+                  </div>
                 </div>
               );
             })}
@@ -98,10 +240,14 @@ function Exhibition() {
                 <div className="exhibitionCard">
                   <img src={img[i]}></img>
                   <div className="exhibitionTitle container">
-                    {truncatedText[i]}
+                    {exhibition[i].title}
                   </div>
-                  <div className="exhibitionLocation container">위치</div>
-                  <div className="exhibitionDate container">날짜</div>
+                  <div className="exhibitionLocation container">
+                    {exhibition[i].location}
+                  </div>
+                  <div className="exhibitionDate container">
+                    {exhibition[i].startDate} ~ {exhibition[i].endDate}
+                  </div>
                 </div>
               );
             })}

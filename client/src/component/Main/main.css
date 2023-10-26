@@ -8,7 +8,7 @@
   font-size: 3vw;
   padding: 1.5vw 0;
   padding-left: 1vw;
-  text-shadow: 2px 2px 4px gray;
+  text-shadow: 2px 2px 2px gray;
 }
 
 .carousel {
@@ -22,6 +22,7 @@
 .Mkkdn {
   padding: 1vw;
   box-shadow: 3px 3px 3px 3px gray inset;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .lastMain {
