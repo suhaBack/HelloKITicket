@@ -211,7 +211,7 @@ function Exhibition() {
             {img.map((a, i) => {
               return (
                 <div className="exhibitionBox1card">
-                  <img src={img[i]}></img>
+                  <img className='exhibitionBox1Img' src={img[i]}></img>
                   <div className="exhibitionBox1Intro">
                     <div className="exhibitionBox1Title">
                       {exhibition[i].title}
