@@ -36,7 +36,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="mainTitle">이달의 콘서트</div>
+      <div className="mainTitle">이달의 추천작</div>
       <Contain>
         <AliceCarousel
           mouseTracking
