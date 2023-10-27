@@ -10,7 +10,7 @@ function Register() {
     const id = e.target.Nid.value
     const pwd = e.target.Npwd.value
     const CKpwd = e.target.CKpwd.value;
-    const email = e.target.Nemail.vlue
+    const email = e.target.Nemail.value
     const name = e.target.Nname.value
     const phone = e.target.Nphone.value
     if (id,pwd,name,email,phone != "") {
@@ -57,7 +57,7 @@ function Register() {
 
       <div className="form-group">
         <label>이메일</label>
-        <input id="Nemail" type="password" className="form-control" placeholder="Email" />
+        <input id="Nemail" type="text" className="form-control" placeholder="Email" />
       </div>
 
       <div className="form-group">

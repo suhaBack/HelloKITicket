@@ -19,6 +19,16 @@ class User extends Sequelize.Model {
         allowNull: false,
         comment: "이름",
       },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+          isEmail: {
+            msg: "Must be a valid email address",
+          }
+        }
+      },
       phone: {
         type: Sequelize.STRING(20),
         allowNull: false,

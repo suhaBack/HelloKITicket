@@ -8,6 +8,7 @@ const port = process.env.NODE_ENV || '3000';
 
 const userRouter = require('./routes/User')
 const eventRouter = require('./routes/Event')
+const loginRouter = require('./routes/Login')
 
 const { sequelize } = require('./models')
 
@@ -28,13 +29,14 @@ var cors = require('cors');
 app.use(cors());
 app.use('/user', userRouter)
 app.use('/event', eventRouter)
+app.use('/login', loginRouter)
 
 
 app.get('/', (req,res) => {
   res.sendFile(index)
 });
 
-sequelize.sync({ force: true })
+sequelize.sync({ force: false })
   .then(() => {
     console.log("DB연결 성공");
   })
