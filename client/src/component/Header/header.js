@@ -7,11 +7,12 @@ import Modal from "react-modal";
 function Header() {
   let [loginTrue, setLoginTrue] = useState(false);
   let [modalIsOpen, setModalIsOpen] = useState(false);
+  let [zIndex, setZindex] = useState(1);
 
-  const onLogin = ()=>{
-    console.log('로그인');
-  }
-  
+  const onLogin = () => {
+    console.log("로그인");
+  };
+
   return (
     <>
       <div className="title">
@@ -44,7 +45,10 @@ function Header() {
             <Link
               className="loginBtn"
               style={{ textDecoration: "none" }}
-              onClick={()=>{setModalIsOpen(true)}}
+              onClick={() => {
+                setModalIsOpen(true);
+                setZindex(0);
+              }}
             >
               로그인
             </Link>
@@ -58,17 +62,39 @@ function Header() {
             </Link>
           </div>
         )}
-        <Modal className="loginModal" isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+        <Modal
+          className="loginModal"
+          isOpen={modalIsOpen}
+          bodyOpenClassName="modal-open"
+          onRequestClose={() => {
+            setModalIsOpen(false);
+            setZindex(1);
+          }}
+        >
           <form onSubmit={onLogin}>
-            <input type="text" placeholder="ID" />
-            <input type="password" placeholder="PASSWORD"></input>
-            <button type="submit">로그인</button>
-            <button onClick={()=>{setModalIsOpen(false)}}>취소</button>
+            <div className="mainTitle">로그인</div>
+            <div className="loginInputBox">
+              <input type="text" placeholder="ID" />
+              <input type="password" placeholder="PASSWORD"></input>
+            </div>
+            <div className="loginBtnBox">
+              <button type="submit">로그인</button>
+            </div>
+            <div className='registerHelp'>
+              계정이 없으신가요?{" "}
+              <Link
+                className="registerBtn"
+                to="/register"
+                style={{ textDecoration: "none" }}
+              >
+                회원가입
+              </Link>
+            </div>
           </form>
         </Modal>
       </div>
 
-      <div className="menuNav">
+      <div className="menuNav" style={{ zIndex: zIndex }}>
         <div className="menu SMNEffect21">
           <Link to="/">홈</Link>
         </div>
