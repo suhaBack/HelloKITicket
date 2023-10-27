@@ -81,11 +81,14 @@ function Header() {
               <button type="submit">로그인</button>
             </div>
             <div className='registerHelp'>
-              계정이 없으신가요?{" "}
+              계정이 없으신가요?
               <Link
                 className="registerBtn"
                 to="/register"
                 style={{ textDecoration: "none" }}
+                onClick={() => {
+                  setModalIsOpen(false)}
+                }
               >
                 회원가입
               </Link>
