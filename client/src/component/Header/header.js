@@ -72,6 +72,15 @@ function Header() {
           }}
         >
           <form onSubmit={onLogin}>
+            <div
+              className="loginCloseBtn"
+              onClick={() => {
+                setModalIsOpen(false);
+                setZindex(1);
+              }}
+            >
+              X
+            </div>
             <div className="mainTitle">로그인</div>
             <div className="loginInputBox">
               <input type="text" placeholder="ID" />
@@ -80,7 +89,7 @@ function Header() {
             <div className="loginBtnBox">
               <button type="submit">로그인</button>
             </div>
-            <div className='registerHelp'>
+            <div className="registerHelp">
               계정이 없으신가요?{" "}
               <Link
                 className="registerBtn"
