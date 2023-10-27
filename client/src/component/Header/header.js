@@ -1,17 +1,42 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./header.css";
 import { FaTicketAlt } from "react-icons/fa";
 import { useState } from "react";
 import Modal from "react-modal";
+import  axios  from "axios";
+import { setCookie, getCookie, removeCookie } from "../../useCookies";
 
 function Header() {
-  let [loginTrue, setLoginTrue] = useState(false);
+  const navigate = useNavigate();
+
   let [modalIsOpen, setModalIsOpen] = useState(false);
   let [zIndex, setZindex] = useState(1);
 
-  const onLogin = () => {
-    console.log("로그인");
-  };
+  const onLogin = (e) => {
+    e.preventDefault();
+    const id = e.target.user_id.value;
+    const pwd = e.target.user_pwd.value;
+    console.log('test',id,pwd);
+    if (id === "" ||pwd === "") {
+      return alert('아이디 또는 비밀번호를 입력해주세요')
+    }else{
+      axios.post('/login',{id,pwd})
+      .then(()=>{
+        console.log("로그인성공");
+        setModalIsOpen(false);
+        setCookie("login",id)
+      })
+      .catch((error)=>{
+        console.error(error);
+        return alert("로그인 실패")
+      })
+    }
+  }
+  const Logout = (e)=>{
+    e.preventDefault();
+    removeCookie("login")
+    navigate('/');
+  }
 
   return (
     <>
@@ -30,15 +55,10 @@ function Header() {
             <i class="fa-solid fa-magnifying-glass"></i>
           </span>
         </div>
-        {loginTrue ? (
+        {getCookie("login") ? (
           <div className="navLogin">
-            <Link
-              className="loginBtn"
-              to="/mypage"
-              style={{ textDecoration: "none" }}
-            >
-              마이페이지
-            </Link>
+            {getCookie("login")} 님
+              <button onClick={Logout}>로그아웃</button>
           </div>
         ) : (
           <div className="navLogin">
@@ -83,11 +103,11 @@ function Header() {
             </div>
             <div className="mainTitle">로그인</div>
             <div className="loginInputBox">
-              <input type="text" placeholder="ID" />
-              <input type="password" placeholder="PASSWORD"></input>
+              <input id="user_id" type="text" placeholder="ID" />
+              <input id="user_pwd" type="password" placeholder="PASSWORD"></input>
             </div>
             <div className="loginBtnBox">
-              <button type="submit">로그인</button>
+              <button type='submit'>로그인</button>
             </div>
             <div className='registerHelp'>
               계정이 없으신가요?
