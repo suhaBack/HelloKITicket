@@ -72,6 +72,15 @@ function Header() {
           }}
         >
           <form onSubmit={onLogin}>
+            <div
+              className="loginCloseBtn"
+              onClick={() => {
+                setModalIsOpen(false);
+                setZindex(1);
+              }}
+            >
+              X
+            </div>
             <div className="mainTitle">로그인</div>
             <div className="loginInputBox">
               <input type="text" placeholder="ID" />

@@ -142,12 +142,22 @@
 }
 
 form {
+  position: relative;
   border: 0.3vw solid rgb(234, 93, 114);
   border-radius: 0.5vw;
   width: 35vw;
   background-color: #fff9f9;
   padding: 2vw;
   font-family: "DNFBitBitv2";
+}
+
+.loginCloseBtn{
+  position: absolute;
+  right: 1.3vw;
+  top: 0.5vw;
+  font-size: 2.5vw;
+  cursor: pointer;
+  color: rgb(30, 30, 30)
 }
 
 form .mainTitle {
@@ -169,7 +179,6 @@ form .mainTitle {
   padding: 0.5vw;
   border: 0.2vw solid rgb(95, 94, 94);
   border-radius: 0.5vw;
-  transition: all 1s;
 }
 
 .loginBtnBox {
