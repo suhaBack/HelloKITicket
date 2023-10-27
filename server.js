@@ -6,9 +6,9 @@ const morgan = require('morgan');
 const index = path.join(__dirname, 'client/build/index.html')
 const port = process.env.NODE_ENV || '3000';
 
-const userRouter = require('./routes/User')
-const eventRouter = require('./routes/Event')
-const loginRouter = require('./routes/Login')
+const userRouter = require('./routes/User');
+const eventRouter = require('./routes/Event');
+const loginRouter = require('./routes/Login');
 
 const { sequelize } = require('./models')
 
