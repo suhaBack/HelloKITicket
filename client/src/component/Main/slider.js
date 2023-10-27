@@ -13,7 +13,7 @@ import jpg7 from "./images/7.jpg";
 const Carousel = () => {
   const responsive = {
     0: {
-      items: 2,
+      items: 5,
     },
     512: {
       items: 5,
@@ -41,7 +41,7 @@ const Carousel = () => {
         <AliceCarousel
           mouseTracking
           infinite={1000}
-          animationDuration={2000}
+          animationDuration={1500}
           disableDotsControls
           disableButtonsControls
           responsive={responsive}

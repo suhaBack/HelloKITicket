@@ -21,9 +21,6 @@
   transition: all 0.3s;
 }
 
-.menuNav a:hover {
-  color: rgb(234, 93, 114);
-}
 
 .title {
   display: flex;
@@ -138,7 +135,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  z-index: 100;
 }
 
 form {
@@ -157,7 +153,8 @@ form {
   top: 0.5vw;
   font-size: 2.5vw;
   cursor: pointer;
-  color: rgb(30, 30, 30)
+  color: rgb(53, 53, 53);
+  font-weight: 900;
 }
 
 form .mainTitle {

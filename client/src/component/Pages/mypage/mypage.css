@@ -1,0 +1,181 @@
+.mypage{
+  font-family: "DNFBitBitv2";
+}
+
+.mypageGridBox{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+  height: 12vw;
+  margin-bottom: 5vw;
+  border: 0.3vw solid rgb(226, 48, 74);
+  border-radius: 5px;
+  background-color: #fff3f3;
+}
+
+.mypageProfile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mypageProfile i{
+  font-size: 10vw;
+}
+
+.mypageUserinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vw;
+
+}
+
+.mypageUserinfoName{
+  padding: 0 1vw;
+  font-size: 2vw;
+}
+
+.mypageUserinfoBtnBox{
+  padding: 0 1vw;
+}
+
+.mypageUserinfoBtnBox button{
+  padding:0.5vw;
+  margin-right: 1vw;
+  font-size: 1vw;
+}
+
+.haveTicketBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1vw;
+}
+
+.ticketCount{
+  font-size: 2.5vw;
+}
+
+.ticketContent{
+  font-size: 1vw;
+}
+
+
+
+
+.reservation{
+  margin-bottom: 5vw;
+}
+
+.reservationBg {
+  background: linear-gradient(#ffffff, rgb(250, 169, 181), #fedfdf);
+}
+
+
+.reservationBox1 {
+  border: 0.3vw solid rgb(226, 48, 74);
+  border-radius: 5px;
+  background-color: #fff3f3;
+  min-height: 14vw;
+}
+
+
+.reservationBox1card {
+  display: grid;
+  grid-template-columns: 1.4fr 5fr 2fr 2fr 1fr;
+  padding: 1vw 0;
+  margin: 0 1vw;
+  border-bottom: 0.3vw solid rgb(234, 93, 114);
+  cursor: pointer;
+}
+
+.reservationBox1Intro,
+.reservationBox1Date,
+.reservationBox1Location,
+.reservationCancel {
+  transition: background-color 0.3s ease; /* 배경색 변경이 0.3초 동안 부드럽게 일어남 */
+}
+
+.reservationBox1Img  {
+  transition: box-shadow 0.3s ease; /* 배경색 변경이 0.3초 동안 부드럽게 일어남 */
+}
+
+.reservationBox1card:hover .reservationBox1Img {
+  box-shadow: none; /* 원하는 배경색으로 변경하세요 */
+}
+
+.reservationBox1card:hover .reservationBox1Intro {
+  background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
+}
+
+.reservationBox1card:hover .reservationBox1Date {
+  background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
+}
+
+.reservationBox1card:hover .reservationBox1Location {
+  background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
+}
+
+.reservationBox1card:hover .reservationCancel{
+  background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
+}
+
+.reservationBox1Intro {
+  padding: 2vw;
+  font-size: 2vw;
+}
+
+.reservationBox1Content {
+  font-size: 1.5vw;
+  padding: 1vw;
+  color: rgb(55, 55, 55)
+}
+
+.reservationBox1Date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+  text-align: center;
+  border-left: 0.2vw solid rgb(234, 93, 114);
+}
+
+.reservationBox1Location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+  border-left: 0.2vw solid rgb(234, 93, 114);
+}
+
+.reservationBox1card img {
+  width: 100%;
+  height: 11vw;
+  box-shadow: 3px 3px 3px  gray;
+}
+
+.reservationBox1 .reservationBox1card:last-child {
+  border: none;
+}
+
+.reservationCancel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.2vw solid rgb(234, 93, 114);
+  font-size: 1.5vw;
+  border-radius: 0 5px 5px 0;
+  transition: all 0.3s;
+}
+
+.reservationCancel:hover{
+  color: rgb(229, 0, 35)
+}
+
+.noReservationContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+}

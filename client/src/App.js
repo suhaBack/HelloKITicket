@@ -9,7 +9,7 @@ import Theme from "./component/Pages/theme.js";
 import Ranking from "./component/Pages/ranking.js";
 import Event from "./component/Pages/event.js";
 import Register from "./component/Pages/register/register.js";
-import Mypage from "./component/Pages/mypage.js";
+import Mypage from "./component/Pages/mypage/mypage.js";
 import Footer from "./component/Footer/footer.js";
 import { Routes, Route } from "react-router-dom";
 

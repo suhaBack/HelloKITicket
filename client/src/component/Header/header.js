@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
 import "./header.css";
 import { FaTicketAlt } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "react-modal";
 
 function Header() {
-  let [loginTrue, setLoginTrue] = useState(false);
+  let [loginTrue, setLoginTrue] = useState(true);
   let [modalIsOpen, setModalIsOpen] = useState(false);
   let [zIndex, setZindex] = useState(1);
+  let [end, setEnd] = useState("");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setEnd("end");
+    }, 100);
+    return setEnd("");
+  }, [modalIsOpen]);
 
   const onLogin = () => {
     console.log("로그인");
@@ -63,7 +71,7 @@ function Header() {
           </div>
         )}
         <Modal
-          className="loginModal"
+          className={"loginModal"}
           isOpen={modalIsOpen}
           bodyOpenClassName="modal-open"
           onRequestClose={() => {
@@ -71,7 +79,7 @@ function Header() {
             setZindex(1);
           }}
         >
-          <form onSubmit={onLogin}>
+          <form onSubmit={onLogin} className={"start " + end}>
             <div
               className="loginCloseBtn"
               onClick={() => {
@@ -79,7 +87,7 @@ function Header() {
                 setZindex(1);
               }}
             >
-              X
+              <i class="fa-solid fa-xmark"></i>
             </div>
             <div className="mainTitle">로그인</div>
             <div className="loginInputBox">
@@ -95,6 +103,10 @@ function Header() {
                 className="registerBtn"
                 to="/register"
                 style={{ textDecoration: "none" }}
+                onClick={() => {
+                  setModalIsOpen(false);
+                  setZindex(1);
+                }}
               >
                 회원가입
               </Link>
