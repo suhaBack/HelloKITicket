@@ -1,62 +1,25 @@
-.jsw_concertGridBox {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 2vw;
-  border: 0.2vw solid rgb(226, 48, 74);
-  border-radius: 5px;
-  background-color: #fedfdf;
-  gap: 2vw;
-}
-
-.jsw_concertImgBox {
-  width: 100%;
-  cursor: pointer;
-  border: 0.2vw solid rgb(234, 125, 142);
-  border-radius: 5px;
-  padding: 1vw;
-  background-color: #fffafa;
-  box-shadow: 3px 3px 3px gray;
-  transition: background-color 0.5s;
-}
-
-.jsw_concertImgBox img {
-  width: 100%;
-  height: 25vw;
-}
-
-.jsw_mainConcertTitle{
-  font-size: 1.5vw;
-
-}
-
-.jsw_mainConcertDetail{
-  opacity: 0.6;
-  font-size: 1vw;
-}
-
-
 .Bg{
   background: linear-gradient(white, rgb(250, 169, 181), #fef4f4);
 }
 
-.concert {
+.musical {
   font-family: "DNFBitBitv2";
   padding-bottom: 5vw;
   padding-top: 2vw;
 }
 
-.monthConcertBox{
+.monthMusicalBox{
   padding: 2vw;
   border: 0.2vw solid rgb(226, 48, 74);
   border-radius: 5px;
   background-color: #fedfdf;
 }
 
-.concertBtnBox {
+.musicalBtnBox {
   padding: 0.8vw 0;
 }
 
-.concertBtnBox i {
+.musicalBtnBox i {
   font-size: 1.5vw;
   border: 3px solid black;
   padding: 0.8vw;
@@ -73,18 +36,18 @@
   border-radius:  0 0.3vw 0.3vw 0;
 }
 
-.concertBtnBox i:hover {
+.musicalBtnBox i:hover {
   border: 3px solid rgb(127, 127, 127);
   color: rgb(127, 127, 127);
 }
 
-.concertBox1 {
+.musicalBox1 {
   border: 0.3vw solid rgb(226, 48, 74);
   border-radius: 5px;
   background-color: #fff3f3;
 }
 
-.concertBox1Header {
+.musicalBox1Header {
   display: grid;
   grid-template-columns: 1.4fr 5fr 2fr 2fr;
   text-align: center;
@@ -95,7 +58,7 @@
   border-radius: 5px 5px 0 0;
 }
 
-.concertBox1card {
+.musicalBox1card {
   display: grid;
   grid-template-columns: 1.4fr 5fr 2fr 2fr;
   padding: 1vw 0;
@@ -104,44 +67,44 @@
   cursor: pointer;
 }
 
-.concertBox1Intro,
-.concertBox1Date,
-.concertBox1Location {
+.musicalBox1Intro,
+.musicalBox1Date,
+.musicalBox1Location {
   transition: background-color 0.3s ease; /* 배경색 변경이 0.3초 동안 부드럽게 일어남 */
 }
 
-.concertBox1Img  {
+.musicalBox1Img  {
   transition: box-shadow 0.3s ease; /* 배경색 변경이 0.3초 동안 부드럽게 일어남 */
 }
 
-.concertBox1card:hover .concertBox1Img {
+.musicalBox1card:hover .musicalBox1Img {
   box-shadow: none; /* 원하는 배경색으로 변경하세요 */
 }
 
-.concertBox1card:hover .concertBox1Intro {
+.musicalBox1card:hover .musicalBox1Intro {
   background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
 }
 
-.concertBox1card:hover .concertBox1Date {
+.musicalBox1card:hover .musicalBox1Date {
   background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
 }
 
-.concertBox1card:hover .concertBox1Location {
+.musicalBox1card:hover .musicalBox1Location {
   background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
 }
 
-.concertBox1Intro {
+.musicalBox1Intro {
   padding: 2vw;
   font-size: 2vw;
 }
 
-.concertBox1Content {
+.musicalBox1Content {
   font-size: 1.5vw;
   padding: 1vw;
   color: rgb(55, 55, 55)
 }
 
-.concertBox1Date {
+.musicalBox1Date {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,7 +112,7 @@
   text-align: center;
 }
 
-.concertBox1Location {
+.musicalBox1Location {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,13 +120,13 @@
   border-radius: 0 0.5vw 0.5vw 0;
 }
 
-.concertBox1card img {
+.musicalBox1card img {
   width: 100%;
   height: 15vw;
   box-shadow: 3px 3px 3px  gray;
 }
 
-.concertBox1 .concertBox1card:last-child {
+.musicalBox1 .musicalBox1card:last-child {
   border: none;
 }
 
@@ -174,7 +137,7 @@
 
 
 
-.concertBox2 {
+.musicalBox2 {
   padding: 1vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -184,7 +147,7 @@
   border-radius: 5px;
 }
 
-.concertCard {
+.musicalCard {
   cursor: pointer;
   border: 0.2vw solid rgb(234, 125, 142);
   border-radius: 5px;
@@ -194,33 +157,33 @@
   transition: background-color 0.5s;
 }
 
-.concertCard:hover {
+.musicalCard:hover {
   background-color: #fcf3f3;
 }
 
-.concertCard > img:hover {
+.musicalCard > img:hover {
   border-radius: 1vw;
 }
 
-.concertCard img {
+.musicalCard img {
   width: 100%;
   height: 23vw;
   transition: border-radius 0.5s;
 }
 
-.concertTitle {
+.musicalTitle {
   padding-top: 1vw;
   font-size: 1.5vw;
   text-align: center;
 }
 
-.concertLocation {
+.musicalLocation {
   font-size: 1;
   text-align: center;
   color: rgb(66, 66, 66)
 }
 
-.concertDate {
+.musicalDate {
   padding-top: 0.5vw 0;
   font-size: 0.9vw;
   text-align: center;
@@ -228,44 +191,44 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .concertBox2 {
+  .musicalBox2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 4vw;
   }
 
-  .concertTitle {
+  .musicalTitle {
     font-size: 2vw;
   }
   
-  .concertLocation {
+  .musicalLocation {
     font-size: 1.5vw;
   }
   
-  .concertDate {
+  .musicalDate {
     font-size: 1.5;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .concertBox2 {
+  .musicalBox2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 5vw;
   }
 
-  .concertCard img {
+  .musicalCard img {
     width: 100%;
     height: 40vw;
   }
 
-  .concertTitle {
+  .musicalTitle {
     font-size: 2.5vw;
   }
   
-  .concertLocation {
+  .musicalLocation {
     font-size: 2vw;
   }
   
-  .concertDate {
+  .musicalDate {
     font-size: 2vw;
   }
 }

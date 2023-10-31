@@ -1,16 +1,14 @@
-.exhibitionBg {
-  background: linear-gradient(#ffffff, rgb(250, 169, 181), #fedfdf);
+.Bg{
+  background: linear-gradient(white, rgb(250, 169, 181), #fef4f4);
 }
 
 .exhibition {
   font-family: "DNFBitBitv2";
   padding-bottom: 5vw;
+  padding-top: 2vw;
 }
 
 .monthExhibitionBox{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2vw;
   padding: 2vw;
   border: 0.2vw solid rgb(226, 48, 74);
   border-radius: 5px;
@@ -34,13 +32,13 @@
   border-radius: 0.3vw 0 0 0.3vw;
 }
 
-.fa-table-cells-large{
+.fa-border-all{
   border-radius:  0 0.3vw 0.3vw 0;
 }
 
 .exhibitionBtnBox i:hover {
-  border: 3px solid rgb(226, 48, 74);
-  color: rgb(226, 48, 74);
+  border: 3px solid rgb(127, 127, 127);
+  color: rgb(127, 127, 127);
 }
 
 .exhibitionBox1 {
@@ -55,7 +53,7 @@
   text-align: center;
   font-size: 1.5vw;
   border-bottom: 0.3vw solid rgb(226, 48, 74);
-  padding: 0.5vw;
+  padding: 0.5vw 1vw;
   background-color:#ffffff;
   border-radius: 5px 5px 0 0;
 }
@@ -145,7 +143,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2vw;
   border: 0.3vw solid rgb(226, 48, 74);
-  background-color: #fedfdf;;
+  background-color: #fedfdf;
   border-radius: 5px;
 }
 

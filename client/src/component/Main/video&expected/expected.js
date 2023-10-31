@@ -12,7 +12,7 @@ function Expexted() {
   const images = [jpg1, jpg2, jpg3, jpg4, jpg5, jpg6, jpg7];
   return (
     <div className='mainExpectedBox'>
-      <div className="mainTitle" style={{ fontSize: "2vw" }}>
+      <div className="mainTitle" style={{ fontSize: "2.5vw" }}>
         상영 예정
       </div>
       <div className='expextedListBox'>

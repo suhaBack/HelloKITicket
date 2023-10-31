@@ -3,11 +3,10 @@ import "./header.css";
 import { FaTicketAlt } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import  axios  from "axios";
+import axios from "axios";
 import { setCookie, getCookie, removeCookie } from "../../useCookies";
 
 function Header() {
-
   const navigate = useNavigate();
 
   let [modalIsOpen, setModalIsOpen] = useState(false);
@@ -25,27 +24,28 @@ function Header() {
     e.preventDefault();
     const id = e.target.user_id.value;
     const pwd = e.target.user_pwd.value;
-    console.log('test',id,pwd);
-    if (id === "" ||pwd === "") {
-      return alert('아이디 또는 비밀번호를 입력해주세요')
-    }else{
-      axios.post('/login',{id,pwd})
-      .then(()=>{
-        console.log("로그인성공");
-        setModalIsOpen(false);
-        setCookie("login",id)
-      })
-      .catch((error)=>{
-        console.error(error);
-        return alert("로그인 실패")
-      })
+    console.log("test", id, pwd);
+    if (id === "" || pwd === "") {
+      return alert("아이디 또는 비밀번호를 입력해주세요");
+    } else {
+      axios
+        .post("/login", { id, pwd })
+        .then(() => {
+          console.log("로그인성공");
+          setModalIsOpen(false);
+          setCookie("login", id);
+        })
+        .catch((error) => {
+          console.error(error);
+          return alert("로그인 실패");
+        });
     }
-  }
-  const Logout = (e)=>{
+  };
+  const Logout = (e) => {
     e.preventDefault();
-    removeCookie("login")
-    navigate('/');
-  }
+    removeCookie("login");
+    navigate("/");
+  };
 
   return (
     <>
@@ -66,8 +66,9 @@ function Header() {
         </div>
         {getCookie("login") ? (
           <div className="navLogin">
-            {getCookie("login")} 님
-              <button onClick={Logout}>로그아웃</button>
+            <span style={{color: 'rgb(229, 0, 35)'}}>{getCookie("login")}</span>님 환영합니다!
+            <span style={{color: 'rgb(229, 0, 35)'}}> / </span>
+            <button className='logoutBtn' onClick={Logout}>로그아웃</button>
           </div>
         ) : (
           <div className="navLogin">
@@ -81,7 +82,7 @@ function Header() {
             >
               로그인
             </Link>
-            /
+            <span style={{color: "rgb(226, 48, 74)"}}>/</span>
             <Link
               className="registerBtn"
               to="/register"
@@ -113,12 +114,16 @@ function Header() {
             <div className="mainTitle">로그인</div>
             <div className="loginInputBox">
               <input id="user_id" type="text" placeholder="ID" />
-              <input id="user_pwd" type="password" placeholder="PASSWORD"></input>
+              <input
+                id="user_pwd"
+                type="password"
+                placeholder="PASSWORD"
+              ></input>
             </div>
             <div className="loginBtnBox">
-              <button type='submit'>로그인</button>
+              <button type="submit">로그인</button>
             </div>
-            <div className='registerHelp'>
+            <div className="registerHelp">
               계정이 없으신가요?
               <Link
                 className="registerBtn"
@@ -153,14 +158,23 @@ function Header() {
           <Link to="/exhibition">전시회</Link>
         </div>
         <div className="menu">
-          <Link to="/theme">테마</Link>
-        </div>
-        <div className="menu">
           <Link to="/ranking">랭킹</Link>
         </div>
-        <div className="lastmenu">
+        <div className="menu">
           <Link to="/event">공지사항</Link>
         </div>
+        {getCookie("login") ? (
+          <div className="lastmenu">
+            <Link to="/mypage">마이페이지</Link>
+          </div>
+        ) : (
+          <div className="lastmenu">
+            <a href="#" onClick={()=>{
+              setModalIsOpen(true);
+              setZindex(0);
+            }}>마이페이지</a>
+          </div>
+        )}
       </div>
     </>
   );

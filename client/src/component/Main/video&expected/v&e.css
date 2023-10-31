@@ -3,25 +3,25 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #faebeb;
-  border-radius: 5px;
-  border: 0.2vw solid rgb(226, 48, 74);
+  border-radius: 1vw;
+  border: 0.3vw solid rgb(226, 48, 74);
 }
 
 .mainVideoBox .mainTitle{
-  padding: 1.5vw 0 0 1.5vw ;
+  padding: 1.5vw 0 1.5vw 1.5vw ;
 }
 
 .mainExpectedBox{
   background-color: #faebeb;
-  border: 0.2vw solid rgb(226, 48, 74);
+  border: 0.3vw solid rgb(226, 48, 74);
   padding:0 1vw 1vw 1vw;
-  border-radius: 5px;
+  border-radius: 1vw;
 }
 
 .videoBox{
   margin-bottom: 1vw;
   opacity: 0;
-  height: 28vw;
+  height: 26vw;
   padding:0 0.5vw
 }
 
@@ -40,14 +40,14 @@ video{
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1vw;
   opacity: 1;
-  background-color: #fbd5d5;;
-  border-radius: 0 0 5px 5px;
+  background-color: #fccbcb;;
+  border-radius: 0 0 0.8vw 0.8vw;
 }
 
 .videoList{
   background-color: black;
   border-radius: 5px;
-  box-shadow: 3px 3px 3px  gray;
+  
 }
 
 .videoListBox video{
@@ -55,10 +55,12 @@ video{
   transition: all 0.3s;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: none;
 }
 
 .videoListBox video:hover{
   opacity: 1;
+  box-shadow: 3px 3px 3px  gray;
 }
 
 
@@ -81,7 +83,7 @@ video{
 }
 
 .expextedContent{
-  color: rgb(234, 93, 114);
+  color: black;
   font-family: "DNFBitBitv2";
   text-align: center;
   padding: 0.5vw;

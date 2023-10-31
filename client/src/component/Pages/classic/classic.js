@@ -10,11 +10,11 @@ import jpg9 from "./../../Main/images/9.jpg";
 import jpg10 from "./../../Main/images/10.jpg";
 import jpg11 from "./../../Main/images/11.jpg";
 import jpg12 from "./../../Main/images/12.jpg";
-import "./exhibition.css";
+import "./classic.css";
 import { useState, useEffect } from "react";
 import MonthCarousel from "./monthslide.js"
 
-function Exhibition() {
+function Classic() {
   
   let [img, setImg] = useState([
     jpg1,
@@ -31,7 +31,7 @@ function Exhibition() {
     jpg12,
   ]);
 
-  let [exhibition, setExhibition] = useState([
+  let [classic, setClassic] = useState([
     {
       id: 1,
       title: "타겟",
@@ -120,18 +120,18 @@ function Exhibition() {
   let [ui, setUi] = useState(1);
   const maxLength = 12; // 원하는 최대 길이 설정
   const originalText = [
-    "전시회1",
-    "전시회2",
-    "전시회3",
-    "전시회4",
-    "전시회5",
-    "전시회6",
-    "전시회7",
-    "전시회8",
-    "전시회9",
-    "전시회10",
-    "전시회11",
-    "전시회12",
+    "클래식1",
+    "클래식2",
+    "클래식3",
+    "클래식4",
+    "클래식5",
+    "클래식6",
+    "클래식7",
+    "클래식8",
+    "클래식9",
+    "클래식10",
+    "클래식11",
+    "클래식12",
   ];
   const [truncatedText, setTruncatedText] = useState(originalText);
   useEffect(() => {
@@ -142,10 +142,10 @@ function Exhibition() {
 
   return (
     <div className="Bg">
-      <div className="exhibition container">
+      <div className="classic container">
         <MonthCarousel></MonthCarousel>
-        <div className="mainTitle">전체 전시회</div>
-        <div className="exhibitionBtnBox">
+        <div className="mainTitle">전체 클래식</div>
+        <div className="classicBtnBox">
           <i
             className="fa-solid fa-bars"
             style={{
@@ -173,8 +173,8 @@ function Exhibition() {
         </div>
 
         {ui == 1 ? (
-          <div className="exhibitionBox1">
-            <div className="exhibitionBox1Header">
+          <div className="classicBox1">
+            <div className="classicBox1Header">
               <div></div>
               <div>공연명</div>
               <div>공연일시</div>
@@ -182,43 +182,43 @@ function Exhibition() {
             </div>
             {img.map((a, i) => {
               return (
-                <div className="exhibitionBox1card">
-                  <img className="exhibitionBox1Img" src={img[i]}></img>
-                  <div className="exhibitionBox1Intro">
-                    <div className="exhibitionBox1Title">
-                      {exhibition[i].title}
+                <div className="classicBox1card">
+                  <img className="classicBox1Img" src={img[i]}></img>
+                  <div className="classicBox1Intro">
+                    <div className="classicBox1Title">
+                      {classic[i].title}
                     </div>
-                    <div className="exhibitionBox1Content">
-                      - 전시회 간단한 설명
+                    <div className="classicBox1Content">
+                      - 클래식 간단한 설명
                     </div>
                   </div>
 
-                  <div className="exhibitionBox1Date">
-                    {exhibition[i].startDate}
+                  <div className="classicBox1Date">
+                    {classic[i].startDate}
                     <br />~<br />
-                    {exhibition[i].endDate}
+                    {classic[i].endDate}
                   </div>
-                  <div className="exhibitionBox1Location">
-                    {exhibition[i].location}
+                  <div className="classicBox1Location">
+                    {classic[i].location}
                   </div>
                 </div>
               );
             })}
           </div>
         ) : (
-          <div className="exhibitionBox2">
+          <div className="classicBox2">
             {img.map((a, i) => {
               return (
-                <div className="exhibitionCard">
+                <div className="classicCard">
                   <img src={img[i]}></img>
-                  <div className="exhibitionTitle container">
-                    {exhibition[i].title}
+                  <div className="classicTitle container">
+                    {classic[i].title}
                   </div>
-                  <div className="exhibitionLocation container">
-                    {exhibition[i].location}
+                  <div className="classicLocation container">
+                    {classic[i].location}
                   </div>
-                  <div className="exhibitionDate container">
-                    {exhibition[i].startDate} ~ {exhibition[i].endDate}
+                  <div className="classicDate container">
+                    {classic[i].startDate} ~ {classic[i].endDate}
                   </div>
                 </div>
               );
@@ -230,4 +230,4 @@ function Exhibition() {
   );
 }
 
-export default Exhibition;
+export default Classic;
