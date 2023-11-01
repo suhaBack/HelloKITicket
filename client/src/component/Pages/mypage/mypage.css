@@ -1,11 +1,17 @@
+.mypageBg{
+  background: linear-gradient(white, rgb(250, 169, 181));
+}
+
 .mypage{
   font-family: "DNFBitBitv2";
+  padding-top: 3vw;
+  padding-bottom: 3vw;
 }
 
 .mypageGridBox{
   display: grid;
   grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
-  height: 12vw;
+  height: 15vw;
   margin-bottom: 5vw;
   border: 0.3vw solid rgb(226, 48, 74);
   border-radius: 5px;
@@ -43,7 +49,17 @@
   padding:0.5vw;
   margin-right: 1vw;
   font-size: 1vw;
+  border-radius: 0.5vw;
+  background-color: white;
 }
+
+.haveTicketBoxBg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color:#fedfdf;
+}
+
 
 .haveTicketBox{
   display: flex;
@@ -51,6 +67,17 @@
   justify-content: center;
   align-items: center;
   gap:1vw;
+  width: 100%;
+  border-right: 0.2vw solid rgb(234, 93, 114);
+}
+
+.lastHaveTicketBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1vw;
+  width: 100%;
 }
 
 .ticketCount{
@@ -64,8 +91,9 @@
 
 
 
+
 .reservation{
-  margin-bottom: 5vw;
+  padding-bottom: 5vw;
 }
 
 .reservationBg {

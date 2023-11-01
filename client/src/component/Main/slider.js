@@ -36,12 +36,11 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="mainTitle">이달의 추천작</div>
       <Contain>
         <AliceCarousel
           mouseTracking
           infinite={1000}
-          animationDuration={1500}
+          animationDuration={2000}
           disableDotsControls
           disableButtonsControls
           responsive={responsive}
@@ -65,7 +64,7 @@ const Contain = styled.div`
 const ItemsContain = styled.div`
   width: 100%;
   height: 100%;
-  padding: 0 10px;
+  padding: 0 1vw;
 `;
 
 const ItemsWrap = styled.div`

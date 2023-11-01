@@ -1,0 +1,206 @@
+.rankingPage{
+  background: linear-gradient(#ffffff, rgb(250, 169, 181), #fedfdf);
+  font-family: "DNFBitBitv2";
+  padding-top: 3vw;
+  padding-bottom: 5vw;
+}
+
+.rankingPageTitle{
+  text-align: center;
+  padding-right: 1vw;
+  color: rgb(250, 96, 119);
+  font-size: 3.5vw;
+}
+
+.rankingPageTitle i{
+  padding-right: 1vw;
+}
+
+.rankingNavBox{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 20vw;
+  border-radius: 0.5vw;
+  border: 0.3vw solid rgb(226, 48, 74);
+  background-color: #fedfdf;
+}
+
+.rankingNav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+  height: 4vw;
+  cursor: pointer;
+  transition: background-color 0.5s
+}
+
+.rankingNav:hover{
+  background-color: rgb(253, 197, 205);
+}
+
+.topRankingBox{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0.3vw solid rgb(226, 48, 74);
+  border-radius: 0.5vw;
+  padding: 3vw 1vw;
+  background-color: #fedfdf;;
+}
+
+.firstRankingBox, .secondRankingBox, .thirdRankingBox{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding-right: 2vw;
+  
+}
+
+.firstRankingBox, .secondRankingBox{
+  border-right:0.2vw solid rgb(234, 93, 114);
+}
+
+.first, .second, .third{
+  display: flex;
+  justify-content: center;
+  font-size: 2vw;
+}
+
+.first{
+  color: rgb(226, 48, 74);
+}
+
+.rankingCard {
+  cursor: pointer;
+  border: 0.3vw solid rgb(234, 125, 142);
+  border-radius: 0.5vw;
+  background-color: #fffafa;
+  box-shadow: 3px 3px 3px gray;
+  transition: background-color 0.5s;
+}
+
+.rankingCard:hover {
+  background-color: #fcf3f3;
+}
+
+
+
+.rankingCard img {
+  width: 100%;
+  height: 23vw;
+  border-radius: 0.3vw 0.3vw 0 0;
+}
+
+.rankingTitle {
+  padding-top: 0.5vw;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.rankingLocation {
+  font-size: 1;
+  text-align: center;
+  color: rgb(66, 66, 66)
+}
+
+.rankingDate {
+  padding-bottom: 0.5vw;
+  font-size: 0.9vw;
+  text-align: center;
+  color: rgb(66, 66, 66)
+}
+
+.rankingBox1 {
+  border: 0.3vw solid rgb(226, 48, 74);
+  border-radius: 0.5vw;
+  background-color: #fff3f3;
+}
+
+.rankingBox1Header {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 5fr 2fr 2fr;
+  text-align: center;
+  font-size: 1.5vw;
+  border-bottom: 0.3vw solid rgb(226, 48, 74);
+  padding: 0.5vw 1vw;
+  background-color:#ffffff;
+  border-radius: 5px 5px 0 0;
+}
+
+.rankingBox1card {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 5fr 2fr 2fr;
+  padding: 1vw 0;
+  margin: 0 1vw;
+  border-bottom: 0.3vw solid rgb(234, 93, 114);
+  cursor: pointer;
+}
+
+.rankingBox1Intro,
+.rankingBox1Date,
+.rankingBox1Location {
+  transition: background-color 0.3s ease; /* 배경색 변경이 0.3초 동안 부드럽게 일어남 */
+}
+
+.rankingBox1Img  {
+  transition: box-shadow 0.3s ease; /* 배경색 변경이 0.3초 동안 부드럽게 일어남 */
+}
+
+.rankingBox1card:hover .rankingBox1Img {
+  box-shadow: none; /* 원하는 배경색으로 변경하세요 */
+}
+
+.rankingBox1card:hover .rankingBox1Intro {
+  background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
+}
+
+.rankingBox1card:hover .rankingBox1Date {
+  background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
+}
+
+.rankingBox1card:hover .rankingBox1Location {
+  background-color: #fedfdf;; /* 원하는 배경색으로 변경하세요 */
+}
+
+.ranking{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vw;
+}
+
+.rankingBox1Intro {
+  padding: 2vw;
+  font-size: 2vw;
+}
+
+.rankingBox1Content {
+  font-size: 1.5vw;
+  padding: 1vw;
+  color: rgb(55, 55, 55)
+}
+
+.rankingBox1Date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.rankingBox1Location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw;
+  border-radius: 0 0.5vw 0.5vw 0;
+}
+
+.rankingBox1card img {
+  width: 100%;
+  height: 15vw;
+  box-shadow: 3px 3px 3px  gray;
+}
+
+.rankingBox1 .rankingBox1card:last-child {
+  border: none;
+}

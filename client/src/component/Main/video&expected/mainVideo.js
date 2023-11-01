@@ -19,7 +19,7 @@ function Mainvideo() {
   }, [op1, op2, op3]);
   return (
     <div className="mainVideoBox">
-      <div className="mainTitle" style={{ fontSize: "2vw" }}>
+      <div className="mainTitle" style={{ fontSize: "2.5vw"}}>
         절찬 상영중
       </div>
       <div className="videoBox" style={{ opacity: op0 }}>

@@ -1,6 +1,5 @@
 import React from "react";
 import "./footer.css";
-import kitty from "./../Main/images/kitty.jpg";
 
 const footer = () => {
   return (

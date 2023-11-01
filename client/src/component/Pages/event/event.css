@@ -1,0 +1,108 @@
+.eventPageBg {
+  background: linear-gradient(#fef4f4, rgb(250, 169, 181));
+}
+
+.eventPage {
+  font-family: "DNFBitBitv2";
+  padding-bottom: 5vw;
+  padding-top: 3vw;
+}
+
+.postListBox {
+  border-top: 0.3vw solid rgb(226, 48, 74);
+}
+
+.postList {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  padding: 2vw;
+  border-bottom: 0.2vw solid rgb(234, 93, 114);
+  background-color: #faf7f7;
+  transition: background-color 0.5s;
+}
+
+.postList:hover {
+  background-color: #fdefef;
+}
+
+.postIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.postTitle {
+  font-size: 2vw;
+  padding-bottom: 1vw;
+}
+
+.postDate {
+  display: flex;
+  align-items: center;
+  font-size: 1.5vw;
+  color: rgb(55, 55, 55);
+}
+
+.postImg {
+  font-size: 1vw;
+  border: 1px solid black;
+  width: 8vw;
+  height: 8vw;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 3vw;
+  font-size: 1.5vw;
+}
+
+.pagination span {
+  margin: 0 1vw;
+  cursor: pointer;
+}
+
+.pagination span.active {
+  color: rgb(226,48,74);
+  cursor: pointer;
+}
+
+
+
+.postDetailBoxBg{
+  padding-bottom: 5vw;
+  padding-top: 3vw;
+  background: linear-gradient(#fef4f4, rgb(250, 169, 181));
+  min-height: 80vh;
+}
+
+.postDetailBox{
+  font-family: "DNFBitBitv2";
+  border: 0.2vw solid rgb(226, 48, 74);
+  border-radius: 5px;
+  padding:2vw;
+  width: 60%;
+  background-color: #faf7f7;
+}
+
+.postDetailHeader{
+  border-bottom: 0.2vw solid rgb(234, 93, 114);
+  padding-bottom: 1vw;
+}
+
+.postDetailTitle{
+  font-size: 2vw;
+  padding-bottom: 1vw;
+}
+
+.postDetailDate{
+  display: flex;
+  align-items: center;
+  font-size: 1vw;
+  color: rgb(55, 55, 55);
+}
+
+.postDetailBody{
+  padding-top: 1vw;
+  font-size: 1.5vw;
+}

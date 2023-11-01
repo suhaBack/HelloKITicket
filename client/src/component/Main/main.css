@@ -3,12 +3,12 @@
 }
 
 .mainTitle {
-  color: rgb(238, 108, 127);
+  color: rgb(250, 96, 119);
   font-family: "DNFBitBitv2";
-  font-size: 3vw;
+  font-size: 3.5vw;
   padding: 1.5vw 0;
   padding-left: 1vw;
-  text-shadow: 2px 2px 2px gray;
+  text-shadow: 0.1vw 0.1vw 0.1vw  gray;
 }
 
 .carousel {
@@ -20,9 +20,7 @@
 }
 
 .Mkkdn {
-  padding: 1vw;
-  box-shadow: 3px 3px 3px 3px gray inset;
-  background-color: rgba(0, 0, 0, 0.03);
+  height: 100%;
 }
 
 .lastMain {
@@ -41,7 +39,7 @@
 .scroll-to-top-button {
   position: fixed;
   bottom: 5vw;
-  right: 25px;
+  right: 1.5vw;
   font-family:'DNFBitBitv2';
   color: #fff;
   font-size: 2vw;
