@@ -12,6 +12,7 @@ import EventDetail from "./component/Pages/event/eventdetail.js";
 import Register from "./component/Pages/register/register.js";
 import Mypage from "./component/Pages/mypage/mypage.js";
 import Footer from "./component/Footer/footer.js";
+import NewTicket from "./component/Pages/newTicket/newTicket.js"
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -27,9 +28,10 @@ function App() {
         <Route path="/exhibition" element={<Exhibition></Exhibition>}></Route>
         <Route path="/ranking" element={<Ranking></Ranking>}></Route>
         <Route path="/event" element={<Event></Event>}></Route>
-        <Route path="/event/:id" element={ <EventDetail></EventDetail>}/>
+        <Route path="/event/:id" element={ <EventDetail></EventDetail>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/mypage" element={<Mypage></Mypage>}></Route>
+        <Route path="/newTicket" element={<NewTicket></NewTicket>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

@@ -5,7 +5,7 @@ class Ticket extends Sequelize.Model {
     Ticket.init({
       prodNum: {
         type: Sequelize.INTEGER,
-        autoIncrement: true,
+        autoIncrement:true,
         primaryKey: true,
         allowNull: false,
         comment: "티켓 번호 (기본키)",
@@ -35,18 +35,21 @@ class Ticket extends Sequelize.Model {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      useyn: {
+      address: {
         type: Sequelize.BOOLEAN, 
         allowNull: false,
         defaultValue: 1,
-        comment: "상품 판매 여부(판매: 1, 판매중단: 0)",
+        comment: "공연/상영 위치", 
       },
       regdate: {
-        type: Sequelize.DATE,
+        type: Sequelize.TEXT,
         allowNull: false,
-        defaultValue: Sequelize.NOW,
-        comment: "상품 등록일",
-        //INSERT INTO foodingdb.Tickets (name, price, content) values('삼다수', 1000, '제주도의 삼다수입니다');
+        comment: "상영/공연 일정",
+      },
+      maxPeople:{
+        type: Sequelize.INTEGER(10),
+        allowNull: false,
+        comment: "최대 입장가능 인원",
       },
     }, {
       sequelize,

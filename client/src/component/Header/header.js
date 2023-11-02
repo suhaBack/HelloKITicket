@@ -13,6 +13,7 @@ function Header() {
   let [zIndex, setZindex] = useState(1);
   let [end, setEnd] = useState("");
 
+  
   useEffect(() => {
     setTimeout(() => {
       setEnd("end");
@@ -162,6 +163,9 @@ function Header() {
         </div>
         <div className="menu">
           <Link to="/event">공지사항</Link>
+        </div>
+        <div className="menu">
+          <Link to="/newTicket">등록</Link>
         </div>
         {getCookie("login") ? (
           <div className="lastmenu">

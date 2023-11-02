@@ -2,7 +2,8 @@ import "./register.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Register() {
+
+function Register(ModalControl) {
   const navigate = useNavigate();
   const NewUser = async (e) => {
     e.preventDefault();
@@ -33,6 +34,11 @@ function Register() {
   {
     /* ID PWD EMAIL NAME PHONE */
   }
+
+  const GoHome = ()=>{
+    navigate('/')
+  }  
+  
   return (
     <form className="sform" onSubmit={NewUser}>
       <h3>회원가입</h3>
@@ -100,10 +106,10 @@ function Register() {
       </div>
 
       <p>
-        계정이 있으신가요? <Link to="/login">로그인</Link>
+        계정이 있으신가요? <Link to="#" onClick={'#'}>로그인</Link>
       </p>
 
-      <button className="home-btn">홈으로 돌아가기</button>
+      <button className="home-btn" onClick={GoHome}>홈으로 돌아가기</button>
     </form>
   );
 }
