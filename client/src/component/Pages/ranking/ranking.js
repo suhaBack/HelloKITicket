@@ -45,7 +45,7 @@ function Ranking(){
 
 
   return (
-    <div className='rankingMain'>
+    <div className='rankingMain container'>
       <h1 className="Topic_Name">장르별 실시간 랭킹</h1>
       <h3 className="Today_Rank">{today} 기준 </h3>
       <div className="Category_Btn_Area">
@@ -266,7 +266,9 @@ function Ranking(){
               <td>
                 <ul className="show_date">
                   <li>0000.00.00</li>
-                  <li>~ 0000.00.00</li>
+                  ~
+                  <br></br>
+                  <li>0000.00.00</li>
                 </ul>
               </td>
               <td>

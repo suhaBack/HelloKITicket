@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
-import jpg1 from "./../images/1.jpg";
-import jpg2 from "./../images/2.jpg";
-import jpg3 from "./../images/3.jpg";
-import jpg4 from "./../images/4.jpg";
-import jpg5 from "./../images/5.jpg";
-import jpg6 from "./../images/6.jpg";
-import jpg7 from "./../images/7.jpg";
+import jpg1 from "./../images/musical/1.gif";
+import jpg2 from "./../images/musical/2.gif";
+import jpg3 from "./../images/musical/3.gif";
+import jpg4 from "./../images/musical/6.gif";
 
 function PushMusical() {
   let push = [jpg1, jpg2, jpg3, jpg4];

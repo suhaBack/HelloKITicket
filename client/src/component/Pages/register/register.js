@@ -2,8 +2,7 @@ import "./register.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-
-function Register(ModalControl) {
+function Register() {
   const navigate = useNavigate();
   const NewUser = async (e) => {
     e.preventDefault();
@@ -34,83 +33,85 @@ function Register(ModalControl) {
   {
     /* ID PWD EMAIL NAME PHONE */
   }
-
-  const GoHome = ()=>{
-    navigate('/')
-  }  
-  
   return (
-    <form className="sform" onSubmit={NewUser}>
-      <h3>회원가입</h3>
+    <div className="registerBg">
+      <form className="sform" onSubmit={NewUser}>
+        <h3>회원가입</h3>
 
-      <div className="form-group">
-        <label>아이디</label>
-        <input id="Nid" type="text" className="form-control" placeholder="ID" />
-      </div>
-
-      <div className="form-group">
-        <label>비밀번호</label>
-        <input
-          id="Npwd"
-          type="password"
-          className="form-control"
-          placeholder="Password"
-        />
-      </div>
-
-      <div className="form-group">
-        <label>비밀번호 확인</label>
-        <input
-          id="CKpwd"
-          type="password"
-          className="form-control"
-          placeholder="Confirm Password"
-        />
-      </div>
-
-      <div className="form-group">
-        <label>이름</label>
-        <input
-          id="Nname"
-          type="text"
-          className="form-control"
-          placeholder="Name"
-        />
-      </div>
-      <div className="form-group">
-        <label>이메일</label>
-        <input
-          id="Nemail"
-          type="text"
-          className="form-control"
-          placeholder="Email"
-        />
-      </div>
-
-      <div className="form-group">
-        <label>전화번호</label>
-        <input
-          id="Nphone"
-          type="text"
-          className="form-control"
-          placeholder="Phone number"
-        />
-      </div>
-
-      <div>
-        <div>
-          <button type="submit" className="btn-signup">
-            가입하기
-          </button>
+        <div className="form-group">
+          <label>아이디</label>
+          <input
+            id="Nid"
+            type="text"
+            className="form-control"
+            placeholder="ID"
+          />
         </div>
-      </div>
 
-      <p>
-        계정이 있으신가요? <Link to="#" onClick={'#'}>로그인</Link>
-      </p>
+        <div className="form-group">
+          <label>비밀번호</label>
+          <input
+            id="Npwd"
+            type="password"
+            className="form-control"
+            placeholder="Password"
+          />
+        </div>
 
-      <button className="home-btn" onClick={GoHome}>홈으로 돌아가기</button>
-    </form>
+        <div className="form-group">
+          <label>비밀번호 확인</label>
+          <input
+            id="CKpwd"
+            type="password"
+            className="form-control"
+            placeholder="Confirm Password"
+          />
+        </div>
+
+        <div className="form-group">
+          <label>이름</label>
+          <input
+            id="Nname"
+            type="text"
+            className="form-control"
+            placeholder="Name"
+          />
+        </div>
+        <div className="form-group">
+          <label>이메일</label>
+          <input
+            id="Nemail"
+            type="text"
+            className="form-control"
+            placeholder="Email"
+          />
+        </div>
+
+        <div className="form-group">
+          <label>전화번호</label>
+          <input
+            id="Nphone"
+            type="text"
+            className="form-control"
+            placeholder="Phone number"
+          />
+        </div>
+
+        <div>
+          <div>
+            <button type="submit" className="btn-signup">
+              가입하기
+            </button>
+          </div>
+        </div>
+
+        <p>
+          계정이 있으신가요? <Link to="/login">로그인</Link>
+        </p>
+
+        <button className="home-btn">홈으로 돌아가기</button>
+      </form>
+    </div>
   );
 }
 

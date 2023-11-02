@@ -1,0 +1,123 @@
+.show_container {
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 1vw;
+}
+
+.casting-title {
+  font-family: "DNFBitBitv2";
+  padding: 1vw;
+  font-size: 24px;
+  font-weight: 100;
+  font-size: 3vw;
+  background-color: rgb(240, 70, 95);
+  color: white;
+}
+
+.casting-info {
+  width: 100%;
+  
+}
+
+.casting-info ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.casting-images {
+  padding: 1vw;
+  width: auto;
+  background-color: #fdf7f7;
+}
+
+.castain-img-name {
+  width: 150px;
+  font-family: "DNFBitBitv2";
+  background-color: white;
+}
+
+.casting-images img {
+  width: 150px;
+}
+
+.casting-names {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: center;
+  color: black;
+  border: 1px solid gray;
+  padding: 1vw
+}
+
+.show-time-info {
+  margin-bottom: 3vw;
+  border: 1px solid gray;
+  font-family: "DNFBitBitv2";
+  border: 0.2vw solid rgb(226, 48, 74);
+  border-radius: 0.5vw;
+  background-color: #fdf7f7;
+  font-size: 1.5vw;
+}
+
+.show-time-info div{
+  padding: 1vw;
+  line-height: 3vw;
+}
+
+.show-time-info h4 {
+  font-size: 3vw;
+  font-weight: 100;
+  background-color: rgb(240, 70, 95);
+  color: white;
+  padding: 1vw;
+}
+
+.show-time-info p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.note-details {
+  margin-bottom: 30px;
+  font-family: "DNFBitBitv2";
+  border: 0.2vw solid rgb(226, 48, 74);
+  border-radius: 0.5vw;
+  background-color: #fdf7f7;
+  font-size: 1.5vw;
+}
+
+.note-details div{
+  padding:2vw;
+  line-height: 3vw;
+}
+
+.note-details h4 {
+  font-weight: 100;
+  font-size: 3vw;
+  background-color: rgb(240, 70, 95);
+  color: white;
+  padding: 1vw;
+}
+
+.casting{
+  border: 0.2vw solid rgb(226, 48, 74);
+  border-radius: 0.5vw;
+  background-color: #fee3e3;
+  margin-bottom: 3vw;
+}
+
+.conDetailinfoBox h4 {
+  font-weight: 100;
+  font-size: 3vw;
+  background-color: rgb(240, 70, 95);
+  color: white;
+  padding: 1vw;
+  font-family: "DNFBitBitv2";
+}
+
+.conDetailinfoBox img {
+  display: block;
+}

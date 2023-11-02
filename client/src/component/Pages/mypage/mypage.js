@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./mypage.css";
 import Reservation from "./reservation.js";
-import jpg1 from "./../../Main/images/1.jpg";
-import jpg2 from "./../../Main/images/2.jpg";
-import jpg3 from "./../../Main/images/3.jpg";
+import jpg1 from "./../../Main/images/concert/1.gif";
+import jpg2 from "./../../Main/images/musical/1.gif";
+import jpg3 from "./../../Main/images/exhibition/1.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { getCookie, removeCookie } from "../../../useCookies";
@@ -16,11 +16,6 @@ function Mypage() {
     removeCookie("login");
     navigate("/");
   };
-
-  const addTicket = (e)=>{
-    e.preventDefault();
-    navigate("/newTicket");
-  }
 
   const navigate = useNavigate();
   const NewUser = async (e) => {
@@ -172,9 +167,6 @@ function Mypage() {
                   </button>
                   <button className="mypageLogoutBtn" onClick={Logout}>
                     로그아웃
-                  </button>
-                  <button className="mypageLogoutBtn" onClick={addTicket}>
-                    행사등록
                   </button>
                 </div>
               </div>

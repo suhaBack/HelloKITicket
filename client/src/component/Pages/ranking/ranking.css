@@ -10,6 +10,7 @@ a{
 }
 
 .rankingMain{
+  font-family: "DNFBitBitv2";
   width: 70%;
   margin: auto;
   text-align: center;
@@ -19,34 +20,32 @@ a{
 }
 .Topic_Name{
   font-family: "DNFBitBitv2";
-  color: #845959 ;
+  color: rgb(250, 96, 119) ;
   font-size: 30px;
   font-size: 3vw;
   padding: 1.5vw 0;
   padding-left: 0.5vw;
-  text-shadow: 2px 2px 4px;
 }
 .Today_Rank{
   font-family: "DNFBitBitv2";
-  color: #845959;
+  color: rgb(250, 96, 119);
   font-size: 2.1vw;
-  padding: 1.5vw 0;
   padding-left: 0.5vw;
-  text-shadow: 2px 2px 4px 
 }
 .Category_Btn_Area{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  margin: auto;
-  border: 1px solid green;
-  width: 459px;
+  width: 50%;
+  margin: 2vw auto;
+  border: 1px solid rgb(226, 48, 74);
   border-radius: 50px;
   background-color: #fff;
+  padding: 0 1vw;
 }
 
 .Category_Btn{
-  font-family: 'Gamja Flower', sans-serif;
+  font-family: "DNFBitBitv2";
   font-style: bold;
   border-style: none;
   padding:  5px 20px 5px 20px; 
@@ -54,7 +53,7 @@ a{
 }
 .Category_Btn:hover{
   box-sizing: border-box;
-  border: 1px solid green;
+  border: 1px solid rgb(234, 93, 114);
 
 }
 
@@ -81,7 +80,7 @@ a{
   text-align: center;
   border-bottom: 1px solid #92dbfe;
   line-height: 1.5;
-  font-family: AppleSDGothicNeo-Regular, "돋움",Dotum,"맑은 고딕","Malgun Gothic","Apple Gothic",sans-serif;
+  font-family: "DNFBitBitv2";
   color: #666;
   letter-spacing: -1px;
 }
@@ -92,19 +91,17 @@ a{
   color: #000;
 }
 .show_date{
-  list-style-type: none;
+  text-align: center;
 }
 .btn_rank{
-  border: 1px solid #878787;
+  border-radius: 0.5vw;
   padding: 5px 25px;
+  background-color: rgb(253, 50, 80);
+  color: white;
 }
-.btn_rank span {
-  color: #000;
 
-}
 .ranking_rank{
   font-size: 30px;
-  font-weight: 600;
   color: #38172d 
 }
 thead>tr:nth-child(n+3){
@@ -130,4 +127,31 @@ thead>tr:nth-child(n+3){
 .ico_change_down::before{
   content:"▼";
   color: greenyellow;
+}
+
+tr{
+  background-color: white;
+}
+
+tbody{
+  margin: 1vw;
+}
+
+tbody tr{
+  border-bottom: 0.2vw solid rgb(234, 93, 114);
+  font-size: 1.2vw;
+}
+
+thead tr{
+  background-color: rgb(240, 70, 95);
+  color: white;
+  font-size: 1.7vw;
+}
+
+.tit_sub_float{
+  margin-bottom: 2vw;
+}
+
+.show_date{
+  padding: 0;
 }

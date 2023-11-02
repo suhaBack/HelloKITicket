@@ -1,22 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./concert.css";
-import concert1 from "../../Main/images/1.jpg";
-import concert2 from "../../Main/images/2.jpg";
-import concert3 from "../../Main/images/3.jpg";
-import concert4 from "../../Main/images/4.jpg";
-import jpg1 from "./../../Main/images/1.jpg";
-import jpg2 from "./../../Main/images/2.jpg";
-import jpg3 from "./../../Main/images/3.jpg";
-import jpg4 from "./../../Main/images/4.jpg";
-import jpg5 from "./../../Main/images/5.jpg";
-import jpg6 from "./../../Main/images/6.jpg";
-import jpg7 from "./../../Main/images/7.jpg";
-import jpg8 from "./../../Main/images/8.jpg";
-import jpg9 from "./../../Main/images/9.jpg";
-import jpg10 from "./../../Main/images/10.jpg";
-import jpg11 from "./../../Main/images/11.jpg";
-import jpg12 from "./../../Main/images/12.jpg";
+import concert1 from "./../../Main/images/concert/1.gif";
+import concert2 from "./../../Main/images/concert/2.jpg";
+import concert3 from "./../../Main/images/concert/3.gif";
+import concert4 from "./../../Main/images/concert/4.gif";
+import jpg1 from "./../../Main/images/concert/1.gif";
+import jpg2 from "./../../Main/images/concert/2.jpg";
+import jpg3 from "./../../Main/images/concert/3.gif";
+import jpg4 from "./../../Main/images/concert/4.gif";
+import jpg5 from "./../../Main/images/concert/5.gif";
+import jpg6 from "./../../Main/images/concert/6.gif";
+import jpg7 from "./../../Main/images/concert/7.gif";
+import jpg8 from "./../../Main/images/concert/8.gif";
+import jpg9 from "./../../Main/images/concert/9.gif";
+import jpg10 from "./../../Main/images/concert/10.gif";
 
 function Concert() {
   let [img, setImg] = useState([
@@ -30,8 +28,6 @@ function Concert() {
     jpg8,
     jpg9,
     jpg10,
-    jpg11,
-    jpg12,
   ]);
 
   let [concert, setConcert] = useState([
@@ -105,43 +101,29 @@ function Concert() {
       endDate: "2023-11-30",
       location: "서울특별시 송파구",
     },
-    {
-      id: 11,
-      title: "부산행",
-      startDate: "2023-10-27",
-      endDate: "2023-11-30",
-      location: "서울특별시 송파구",
-    },
-    {
-      id: 12,
-      title: "Sahrryock",
-      startDate: "2023-10-27",
-      endDate: "2023-11-30",
-      location: "서울특별시 송파구",
-    },
   ]);
   let [ui, setUi] = useState(1);
 
   let mainConcert = [
     {
       id: 1,
-      title: "해피성중데이",
-      content: "팀24 멤버 '곤'의 생일 기념 팬미팅",
+      title: "정동원",
+      content: "JEONG DONG WON’S 3rd CHRISTMAS CONCERT",
     },
     {
       id: 2,
-      title: "2023 THE RAMPAGE 1st FAN CONCERT in SEOUL∼THE BEGINNING∼",
-      content: "한국 레이버즈 여러분과 함께하는 첫...",
+      title: "GOD",
+      content: "god`s MASTERPIECE",
     },
     {
       id: 3,
-      title: "현대카드 Curated 89 민수 〈민수는 참을 수 없어！〉",
-      content: "참을 수 없는 민수 단독 공연!",
+      title: "지우림",
+      content: "Midnight Express",
     },
     {
       id: 4,
-      title: "BLITZERS FAN－CON［A to z］",
-      content: "블리들을 위한 첫 팬콘서트",
+      title: "Daniel Caesar",
+      content: "Superpowers World Tour - Leg 3",
     },
   ];
   return (

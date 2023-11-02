@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react';
-import jpg1 from "./../images/1.jpg";
-import jpg2 from "./../images/2.jpg";
-import jpg3 from "./../images/3.jpg";
-import jpg4 from "./../images/4.jpg";
-import jpg5 from "./../images/5.jpg";
-import jpg6 from "./../images/6.jpg";
-import jpg7 from "./../images/7.jpg";
+import jpg1 from "./../images//classic/1.gif";
+import jpg2 from "./../images//classic/2.gif";
+import jpg3 from "./../images//classic/3.gif";
+import jpg4 from "./../images//classic/4.gif";
 
 function PushClassic(){
-  let push = [jpg3, jpg7, jpg2, jpg4];
+  let push = [jpg1, jpg2, jpg3, jpg4];
   let [end, setEnd] = useState('');
   useEffect(()=>{
     setTimeout(() => {

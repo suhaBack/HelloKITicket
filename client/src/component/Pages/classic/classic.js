@@ -1,15 +1,13 @@
-import jpg1 from "./../../Main/images/1.jpg";
-import jpg2 from "./../../Main/images/2.jpg";
-import jpg3 from "./../../Main/images/3.jpg";
-import jpg4 from "./../../Main/images/4.jpg";
-import jpg5 from "./../../Main/images/5.jpg";
-import jpg6 from "./../../Main/images/6.jpg";
-import jpg7 from "./../../Main/images/7.jpg";
-import jpg8 from "./../../Main/images/8.jpg";
-import jpg9 from "./../../Main/images/9.jpg";
-import jpg10 from "./../../Main/images/10.jpg";
-import jpg11 from "./../../Main/images/11.jpg";
-import jpg12 from "./../../Main/images/12.jpg";
+import jpg1 from "./../../Main/images/classic/1.gif";
+import jpg2 from "./../../Main/images/classic/2.gif";
+import jpg3 from "./../../Main/images/classic/3.gif";
+import jpg4 from "./../../Main/images/classic/4.gif";
+import jpg5 from "./../../Main/images/classic/5.gif";
+import jpg6 from "./../../Main/images/classic/6.gif";
+import jpg7 from "./../../Main/images/classic/7.gif";
+import jpg8 from "./../../Main/images/classic/8.gif";
+import jpg9 from "./../../Main/images/classic/9.gif";
+import jpg10 from "./../../Main/images/classic/10.gif";
 import "./classic.css";
 import { useState, useEffect } from "react";
 import MonthCarousel from "./monthslide.js"
@@ -27,8 +25,6 @@ function Classic() {
     jpg8,
     jpg9,
     jpg10,
-    jpg11,
-    jpg12,
   ]);
 
   let [classic, setClassic] = useState([
@@ -102,20 +98,6 @@ function Classic() {
       endDate: "2023-11-30",
       location: "서울특별시 송파구",
     },
-    {
-      id: 11,
-      title: "부산행",
-      startDate: "2023-10-27",
-      endDate: "2023-11-30",
-      location: "서울특별시 송파구",
-    },
-    {
-      id: 12,
-      title: "Sahrryock",
-      startDate: "2023-10-27",
-      endDate: "2023-11-30",
-      location: "서울특별시 송파구",
-    },
   ]);
   let [ui, setUi] = useState(1);
   const maxLength = 12; // 원하는 최대 길이 설정
@@ -130,8 +112,6 @@ function Classic() {
     "클래식8",
     "클래식9",
     "클래식10",
-    "클래식11",
-    "클래식12",
   ];
   const [truncatedText, setTruncatedText] = useState(originalText);
   useEffect(() => {

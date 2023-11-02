@@ -2,13 +2,13 @@ import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from "react-alice-carousel";
-import jpg1 from "./images/1.jpg";
-import jpg2 from "./images/2.jpg";
-import jpg3 from "./images/3.jpg";
-import jpg4 from "./images/4.jpg";
-import jpg5 from "./images/5.jpg";
-import jpg6 from "./images/6.jpg";
-import jpg7 from "./images/7.jpg";
+import jpg1 from "./images/concert/1.gif";
+import jpg2 from "./images/concert/2.jpg";
+import jpg3 from "./images/concert/3.gif";
+import jpg4 from "./images/concert/4.gif";
+import jpg5 from "./images/concert/5.gif";
+import jpg6 from "./images/concert/6.gif";
+import jpg7 from "./images/concert/7.gif";
 
 const Carousel = () => {
   const responsive = {

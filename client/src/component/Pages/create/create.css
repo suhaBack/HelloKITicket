@@ -1,0 +1,75 @@
+.notice-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice-section {
+  width: 80%;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.notice-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 2.5vw;
+  font-weight: 700;
+  height: 50px;
+  text-align: center;
+  font-family: "DNFBitBitv2";
+}
+
+.notice-form{
+  display: flex;
+  justify-content: center;
+}
+
+.file-box {
+  height: 80px;
+  border-bottom: 1px solid gray;
+}
+
+/* notice-wrapper에 대한 스타일 */
+.notice-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+/* notice-wrapper 내부의 input 필드에 대한 스타일 */
+.notice-wrapper input[type="text"], 
+.notice-wrapper input[type="password"], 
+.notice-wrapper input[type="email"], 
+.notice-wrapper textarea {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 12px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.notice-wrapper textarea {
+  height: 100px;
+  resize: none;
+}
+
+.notice-wrapper textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+.notice-wrapper button[type="submit"] {
+  float: right;
+  margin-left: auto;
+  border-radius: 20px;
+  margin-top: 1vw;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
