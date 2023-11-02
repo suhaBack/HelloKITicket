@@ -5,8 +5,8 @@ class Ticket extends Sequelize.Model {
     Ticket.init({
       prodNum: {
         type: Sequelize.INTEGER,
-        autoIncrement:true,
         primaryKey: true,
+        autoIncrement:true,
         allowNull: false,
         comment: "티켓 번호 (기본키)",
       },
@@ -38,7 +38,6 @@ class Ticket extends Sequelize.Model {
       address: {
         type: Sequelize.BOOLEAN, 
         allowNull: false,
-        defaultValue: 1,
         comment: "공연/상영 위치", 
       },
       regdate: {

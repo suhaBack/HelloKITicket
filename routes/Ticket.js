@@ -14,7 +14,7 @@ router
 .post('/',async (req,res,next)=>{
   try {
     console.log(typeof(req.body.kind));
-    console.log(req.body);
+    
     const newTicket = Ticket.create({
       name: req.body.title,
       kind: req.body.kind,
@@ -28,7 +28,7 @@ router
     res.status(201).end();
   } catch (error) {
     console.error(error);
-    next(error);
+    res.status
   }
 })
 

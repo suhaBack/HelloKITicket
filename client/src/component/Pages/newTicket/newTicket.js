@@ -1,12 +1,21 @@
 import axios from "axios";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function NewTicket() {
   const navigate = useNavigate();
+  const [image,setimageURL] = useState();
+
+  const loadImg = (e)=>{
+    let value = URL.createObjectURL(e.target.files[0]);
+    setimageURL(value);
+  }
 
   const AddContents = async (e) => {
     e.preventDefault();
-    const imageURL = e.target.contentImage.value; // C:\fakepath\스크린샷 2023-06-04 031733.png
+
+
+    const imageURL = "test"; // C:\fakepath\스크린샷 2023-06-04 031733.png
     const title = e.target.contentTitle.value; // asd
     const kind = e.target.contnetKind.value; // 2
     const date = e.target.contentDate.value;
@@ -16,6 +25,8 @@ function NewTicket() {
     const people = e.target.contentMax.value;
     //db 순서 = 제목 종류 가격 설명 사진 위치 일정 최대인원
     // console.log(imageURL,title,find,date,address,price,help,people);
+
+    console.log('test',imageURL);
 
     await axios.post('/newTicket', {title,kind, price, help, imageURL, address, date, people})
     .then(()=>{
@@ -30,7 +41,7 @@ function NewTicket() {
     <div>
       <form onSubmit={AddContents}>
         <label>포스터/홍보 이미지</label>
-        <input type="file" name="newImage" id="contentImage"></input>
+        <input type="file" name="newImage" id="contentImage" onChange={loadImg}></input>
         <label>프로그램 명</label>
         <input type="text" name="newImage" id="contentTitle"></input>
         <label>분류</label>

@@ -164,9 +164,6 @@ function Header() {
         <div className="menu">
           <Link to="/event">공지사항</Link>
         </div>
-        <div className="menu">
-          <Link to="/newTicket">등록</Link>
-        </div>
         {getCookie("login") ? (
           <div className="lastmenu">
             <Link to="/mypage">마이페이지</Link>
