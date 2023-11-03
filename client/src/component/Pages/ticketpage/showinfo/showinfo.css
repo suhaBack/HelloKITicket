@@ -26,30 +26,38 @@
 }
 
 .casting-images {
-  padding: 1vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 1vw;
   width: auto;
   background-color: #fdf7f7;
 }
 
+
+
 .castain-img-name {
-  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: "DNFBitBitv2";
   background-color: white;
+  margin: 1vw;
+  box-shadow: 2px 2px 2px 2px gray;
 }
 
-.casting-images img {
-  width: 150px;
+.castain-img-name img{
+  width: 100%;
 }
 
 .casting-names {
   display: flex;
   width: 100%;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 2vw;
   justify-content: center;
   color: black;
   border: 1px solid gray;
-  padding: 1vw
+
 }
 
 .show-time-info {

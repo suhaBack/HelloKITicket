@@ -31,7 +31,7 @@ function Ranking(){
 
   }
   //버튼 클릭시 카테고리를 변경
-  let [rankingCategoty, setRankingCategory] = useState("콘서트/페스티벌");
+  let [rankingCategory, setRankingCategory] = useState("콘서트/페스티벌");
 
 
 
@@ -49,21 +49,58 @@ function Ranking(){
       <h1 className="Topic_Name">장르별 실시간 랭킹</h1>
       <h3 className="Today_Rank">{today} 기준 </h3>
       <div className="Category_Btn_Area">
-        <button className="Category_Btn" id="CB1" onClick={()=>{
-          setRankingCategory("콘서트/페스티벌");SetTopic();}} value={'콘서트/페스티벌'}>
-        콘서트/페스티벌
-        </button>
-        <button className="Category_Btn" id="CB2" onClick={()=>{setRankingCategory("뮤지컬/연극"); SetTopic();}} value={'뮤지컬/연극'}>
-        뮤지컬/연극
-        </button>
-        <button className="Category_Btn" id="CB3" onClick={()=>{setRankingCategory("전시/클래식/기타"); SetTopic();}} value={'전시/클래식/기타'}>
-        전시/클래식/기타
-        </button>
+      <button
+  className="Category_Btn"
+  id="CB1"
+  onClick={() => {
+    setRankingCategory("콘서트/페스티벌");
+    SetTopic();
+  }}
+  value={'콘서트/페스티벌'}
+  style={{
+    backgroundColor: rankingCategory === "콘서트/페스티벌" ? "rgb(255, 202, 211)" : ""
+    // Change the colors to your desired background colors
+  }}
+>
+  콘서트/페스티벌
+</button>
+
+<button
+  className="Category_Btn"
+  id="CB2"
+  onClick={() => {
+    setRankingCategory("뮤지컬/연극");
+    SetTopic();
+  }}
+  value={'뮤지컬/연극'}
+  style={{
+    backgroundColor: rankingCategory === "뮤지컬/연극" ? "rgb(255, 202, 211)" : ""
+    // Change the colors to your desired background colors
+  }}
+>
+  뮤지컬/연극
+</button>
+
+<button
+  className="Category_Btn"
+  id="CB3"
+  onClick={() => {
+    setRankingCategory("전시/클래식/기타");
+    SetTopic();
+  }}
+  value={'전시/클래식/기타'}
+  style={{
+    backgroundColor: rankingCategory === "전시/클래식/기타" ? "rgb(255, 202, 211)" : ""
+    // Change the colors to your desired background colors
+  }}
+>
+  전시/클래식/기타
+</button>
         </div>
 
       <div className="rank_top">
         {/* <h2 className="tit_sub_float" id="rankTopTitle">콘서트/페스티벌</h2> */}
-        <h2 className="tit_sub_float" id="rankTopTitle" value={'콘서트/페스티벌'}>{rankingCategoty}</h2>
+        <h2 className="tit_sub_float" id="rankTopTitle" value={'콘서트/페스티벌'}>{rankingCategory}</h2>
       </div>
       <div className="ranking_list">
         <table summary="TOP 10 리스트" className="table_style_1">

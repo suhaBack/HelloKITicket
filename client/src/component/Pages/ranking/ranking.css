@@ -33,28 +33,32 @@ a{
   padding-left: 0.5vw;
 }
 .Category_Btn_Area{
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  width: 50%;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 2vw auto;
-  border: 1px solid rgb(226, 48, 74);
-  border-radius: 50px;
+  border: 0.2vw solid #e2304a;
+  border-radius: 0.5vw;
   background-color: #fff;
-  padding: 0 1vw;
+}
+
+.Category_Btn:first-child {
+  border-radius: 0.4vw 0 0 0.4vw;
+}
+
+.Category_Btn:last-child {
+  border-radius: 0 0.4vw 0.4vw  0;
 }
 
 .Category_Btn{
   font-family: "DNFBitBitv2";
-  font-style: bold;
   border-style: none;
-  padding:  5px 20px 5px 20px; 
-  border-radius: 50px;
+  padding: 1vw; 
+  transition: all 0.5s;
 }
-.Category_Btn:hover{
-  box-sizing: border-box;
-  border: 1px solid rgb(234, 93, 114);
 
+.Category_Btn:hover{
+  background-color: rgb(255, 202, 211)
 }
 
 

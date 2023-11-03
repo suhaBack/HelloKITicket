@@ -17,7 +17,7 @@ const ListItem = ({ title, content }) => (
 
 const TicketPage = () => {
   const ticketDetails = {
-    title: "티켓 페이지 제목",
+    title: "티켓 정보",
     posterUrl: Main_Hero,
   };
 
@@ -48,16 +48,39 @@ const TicketPage = () => {
             />
             <div className="ps_all">
               <div className="poster_info">
-                <ListItem title="장소" content="where" />
-                <ListItem title="공연기간" content="yyyy.mm.dd ~ yyyy.mm.dd" />
-                <ListItem title="공연시간" content="n분" />
-                <ListItem title="관람연령" content="만 n세이상" />
-                <ListItem title="가격" content="000,000 원" />
-                <ListItem title="혜택" content="OOO 할부" />
-                <ListItem
-                  title="배송"
-                  content="yyyy년 mm월 dd일 배송되는 상품입니다."
-                />
+                <div className="poster_info_title">IM HERO (TOUR 2023)</div>
+                <div className="poster_info_gridBox">
+                  <div className="info_gridBox">
+                    <div className="info_title">장소</div>
+                    <div className="info_content">서울특별시 송파구</div>
+                  </div>
+                  <div className="info_gridBox">
+                    <div className="info_title">공연기간</div>
+                    <div className="info_content">2023.10.10 ~ 2023.11.13</div>
+                  </div>
+                  <div className="info_gridBox">
+                    <div className="info_title">공연시간</div>
+                    <div className="info_content">2시간</div>
+                  </div>
+                  <div className="info_gridBox">
+                    <div className="info_title">관람연령</div>
+                    <div className="info_content">만 19세</div>
+                  </div>
+                  <div className="info_gridBox">
+                    <div className="info_title">혜택</div>
+                    <div className="info_content">국제대생 무료</div>
+                  </div>
+                  <div className="info_gridBox">
+                    <div className="info_title">배송</div>
+                    <div className="info_content">CJ대한통운</div>
+                  </div>
+                </div>
+                <div className="pricereserveBox">
+                  <div className="ticketPrice">티켓 구매가: 30000원</div>
+                  <div className="reserveBtnBox">
+                    <div className="reserveBtn">예매하기</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
