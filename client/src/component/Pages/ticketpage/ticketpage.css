@@ -46,12 +46,12 @@
 .hd_ps_infoBox {
   border-radius: 0 0 0.5vw 0.5vw;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1vw;
+  grid-template-columns: 1fr 2fr;
   padding: 2vw 4vw;
   border-right: 0.2vw solid rgb(226, 48, 74);
   border-left: 0.2vw solid rgb(226, 48, 74);
   border-bottom: 0.2vw solid rgb(226, 48, 74);
+  background-color: #fff0f0;
 }
 
 .hd_name {
@@ -64,21 +64,27 @@
 }
 
 .ps_all {
-  display: flex;
+  padding: 1vw;
   font-family: "DNFBitBitv2";
-  justify-content: center;
+
+  background-color: white;;
 }
 
 .hd_poster {
   object-fit: cover;
   height: 100%;
+  width: 100%;
 }
 
 .poster_info {
-  font-size: 17px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.poster_info_title{
+  font-size: 3vw;
 }
 
 .sticky-section {
@@ -106,4 +112,61 @@
 
 .sticky-section > button.active {
   border-bottom: 0.5vw solid rgb(240, 70, 95);
+}
+
+.poster_info_gridBox{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4vw;
+  padding-bottom: 2vw;
+  border-bottom: 0.2vw solid rgb(240, 70, 95);
+}
+
+
+
+.pricereserveBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1vw;
+}
+
+.info_gridBox{
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+}
+
+.info_title{
+  margin: 1vw 0 ;
+  font-size: 1.5vw;
+  border-right: 0.2vw solid gray;
+}
+
+.info_content{
+  padding: 1vw;
+  font-size: 1.5vw;
+}
+
+.ticketPrice{
+  font-size: 2vw;
+}
+
+.reserveBtnBox{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.reserveBtn {
+  border-radius: 0.5vw;
+  padding: 0.5vw 1.5vw;
+  font-size: 2vw;
+  color: #ffffff;
+  background-color: #f2506e;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.reserveBtn:hover {
+  background-color: #e62f50;
 }
