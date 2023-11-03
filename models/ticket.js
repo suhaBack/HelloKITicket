@@ -31,7 +31,7 @@ class Ticket extends Sequelize.Model {
         allowNull: false,
         comment: "공연/전시회 설명",
       },
-      imageUrl:{
+      imageURL:{
         type: Sequelize.STRING,
         allowNull: false,
       },

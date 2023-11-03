@@ -14,11 +14,12 @@ router
 .post('/',async (req,res,next)=>{
   try {
     console.log(typeof(req.body.kind));
-    
+    console.log(req.body.imageURL);
     const newTicket = Ticket.create({
       name: req.body.title,
       kind: req.body.kind,
       price: req.body.price,
+      content: req.body.help,
       imageURL: req.body.imageURL,
       address: req.body.address,
       regdate: req.body.date,
@@ -28,7 +29,7 @@ router
     res.status(201).end();
   } catch (error) {
     console.error(error);
-    res.status
+    res.status(500).end();
   }
 })
 

@@ -16,6 +16,10 @@ function Mypage() {
     removeCookie("login");
     navigate("/");
   };
+  const newTicket =(e)=>{
+    e.preventDefault();
+    navigate("/newTicket");
+  }
 
   const navigate = useNavigate();
   const NewUser = async (e) => {
@@ -167,6 +171,9 @@ function Mypage() {
                   </button>
                   <button className="mypageLogoutBtn" onClick={Logout}>
                     로그아웃
+                  </button>
+                  <button className="mypageLogoutBtn" onClick={newTicket}>
+                    행사등록
                   </button>
                 </div>
               </div>
