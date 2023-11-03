@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react';
-import jpg1 from "./../images/1.jpg";
-import jpg2 from "./../images/2.jpg";
-import jpg3 from "./../images/3.jpg";
-import jpg4 from "./../images/4.jpg";
-import jpg5 from "./../images/5.jpg";
-import jpg6 from "./../images/6.jpg";
-import jpg7 from "./../images/7.jpg";
+import jpg1 from "./../images/exhibition/1.jpg";
+import jpg2 from "./../images/exhibition/2.jpg";
+import jpg3 from "./../images/exhibition/3.jpg";
+import jpg4 from "./../images/exhibition/4.jpg";
 
 function PushExhibition(){
-  let push = [jpg1, jpg3, jpg5, jpg7];
+  let push = [jpg1, jpg2, jpg3, jpg4];
   let [end, setEnd] = useState('');
   useEffect(()=>{
     setTimeout(() => {

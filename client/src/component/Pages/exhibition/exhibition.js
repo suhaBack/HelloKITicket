@@ -1,15 +1,13 @@
-import jpg1 from "./../../Main/images/1.jpg";
-import jpg2 from "./../../Main/images/2.jpg";
-import jpg3 from "./../../Main/images/3.jpg";
-import jpg4 from "./../../Main/images/4.jpg";
-import jpg5 from "./../../Main/images/5.jpg";
-import jpg6 from "./../../Main/images/6.jpg";
-import jpg7 from "./../../Main/images/7.jpg";
-import jpg8 from "./../../Main/images/8.jpg";
-import jpg9 from "./../../Main/images/9.jpg";
-import jpg10 from "./../../Main/images/10.jpg";
-import jpg11 from "./../../Main/images/11.jpg";
-import jpg12 from "./../../Main/images/12.jpg";
+import jpg1 from "./../../Main/images/exhibition/1.jpg";
+import jpg2 from "./../../Main/images/exhibition/2.jpg";
+import jpg3 from "./../../Main/images/exhibition/3.jpg";
+import jpg4 from "./../../Main/images/exhibition/4.jpg";
+import jpg5 from "./../../Main/images/exhibition/5.jpg";
+import jpg6 from "./../../Main/images/exhibition/6.jpg";
+import jpg7 from "./../../Main/images/exhibition/7.jpg";
+import jpg8 from "./../../Main/images/exhibition/8.jpg";
+import jpg9 from "./../../Main/images/exhibition/9.jpg";
+import jpg10 from "./../../Main/images/exhibition/10.jpg";
 import "./exhibition.css";
 import { useState, useEffect } from "react";
 import MonthCarousel from "./monthslide.js"
@@ -27,8 +25,6 @@ function Exhibition() {
     jpg8,
     jpg9,
     jpg10,
-    jpg11,
-    jpg12,
   ]);
 
   let [exhibition, setExhibition] = useState([
@@ -102,20 +98,6 @@ function Exhibition() {
       endDate: "2023-11-30",
       location: "서울특별시 송파구",
     },
-    {
-      id: 11,
-      title: "부산행",
-      startDate: "2023-10-27",
-      endDate: "2023-11-30",
-      location: "서울특별시 송파구",
-    },
-    {
-      id: 12,
-      title: "Sahrryock",
-      startDate: "2023-10-27",
-      endDate: "2023-11-30",
-      location: "서울특별시 송파구",
-    },
   ]);
   let [ui, setUi] = useState(1);
   const maxLength = 12; // 원하는 최대 길이 설정
@@ -130,8 +112,6 @@ function Exhibition() {
     "전시회8",
     "전시회9",
     "전시회10",
-    "전시회11",
-    "전시회12",
   ];
   const [truncatedText, setTruncatedText] = useState(originalText);
   useEffect(() => {
@@ -183,7 +163,7 @@ function Exhibition() {
             {img.map((a, i) => {
               return (
                 <div className="exhibitionBox1card">
-                  <img className="exhibitionBox1Img" src={img[i]}></img>
+                  <img className="exhibitionBox1Img" src={img[i]} loading="lazy"></img>
                   <div className="exhibitionBox1Intro">
                     <div className="exhibitionBox1Title">
                       {exhibition[i].title}
@@ -210,7 +190,7 @@ function Exhibition() {
             {img.map((a, i) => {
               return (
                 <div className="exhibitionCard">
-                  <img src={img[i]}></img>
+                  <img src={img[i]} loading="lazy"></img>
                   <div className="exhibitionTitle container">
                     {exhibition[i].title}
                   </div>

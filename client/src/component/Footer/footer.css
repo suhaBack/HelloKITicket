@@ -11,7 +11,7 @@
   padding: 1.5vw 0;
 }
 
-#footer span, ul li {
+#footer span, #footer-copy ul li {
   padding: 0 2vw;
   line-height: 1;
 }

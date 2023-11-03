@@ -13,6 +13,8 @@ import Register from "./component/Pages/register/register.js";
 import Mypage from "./component/Pages/mypage/mypage.js";
 import Footer from "./component/Footer/footer.js";
 import NewTicket from "./component/Pages/newTicket/newTicket.js"
+import TicketPage from "./component/Pages/ticketpage/index.js"
+import Create from "./component/Pages/create/create.js"
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/mypage" element={<Mypage></Mypage>}></Route>
         <Route path="/newTicket" element={<NewTicket></NewTicket>}></Route>
+        <Route path="/ticketpage" element={<TicketPage></TicketPage>}></Route>
+        <Route path="/eventCreate" element={<Create></Create>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

@@ -2,11 +2,11 @@ import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from "react-alice-carousel";
-import jpg1 from "./../../Main/images/1.jpg";
-import jpg2 from "./../../Main/images/2.jpg";
-import jpg3 from "./../../Main/images/3.jpg";
-import jpg4 from "./../../Main/images/4.jpg";
-import jpg5 from "./../../Main/images/5.jpg";
+import jpg1 from "./../../Main/images/exhibition/1.jpg";
+import jpg2 from "./../../Main/images/exhibition/2.jpg";
+import jpg3 from "./../../Main/images/exhibition/3.jpg";
+import jpg4 from "./../../Main/images/exhibition/4.jpg";
+import jpg5 from "./../../Main/images/exhibition/5.jpg";
 import { useState } from 'react';
 
 const MonthCarousel = () => {
@@ -72,7 +72,7 @@ const MonthCarousel = () => {
       <ItemsContain>
         <ItemsWrap>
           <div className="exhibitionCard">
-            <img src={img[i]}></img>
+            <img src={img[i]} loading="lazy"></img>
             <div className="exhibitionTitle container">
               {monthExhibition[i].title}
             </div>

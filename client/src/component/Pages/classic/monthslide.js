@@ -2,11 +2,11 @@ import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from "react-alice-carousel";
-import jpg1 from "./../../Main/images/1.jpg";
-import jpg2 from "./../../Main/images/2.jpg";
-import jpg3 from "./../../Main/images/3.jpg";
-import jpg4 from "./../../Main/images/4.jpg";
-import jpg5 from "./../../Main/images/5.jpg";
+import jpg1 from "./../../Main/images/classic/1.gif";
+import jpg2 from "./../../Main/images/classic/2.gif";
+import jpg3 from "./../../Main/images/classic/3.gif";
+import jpg4 from "./../../Main/images/classic/4.gif";
+import jpg5 from "./../../Main/images/classic/5.gif";
 import { useState } from 'react';
 
 const MonthCarousel = () => {

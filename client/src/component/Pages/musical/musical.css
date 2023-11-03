@@ -1,3 +1,40 @@
+.Junho_musicalGridBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2vw;
+  border: 0.2vw solid rgb(226, 48, 74);
+  border-radius: 5px;
+  background-color: #fedfdf;
+  gap: 2vw;
+}
+
+.Junho_musicalImgBox {
+  width: 100%;
+  cursor: pointer;
+  border: 0.2vw solid rgb(234, 125, 142);
+  border-radius: 5px;
+  padding: 1vw;
+  background-color: #fffafa;
+  box-shadow: 3px 3px 3px gray;
+  transition: background-color 0.5s;
+}
+
+.Junho_musicalImgBox img {
+  width: 100%;
+  height: 25vw;
+}
+
+.Junho_mainMusicalTitle{
+  font-size: 1.5vw;
+
+}
+
+.Junho_mainMusicalDetail{
+  opacity: 0.6;
+  font-size: 1vw;
+}
+
+
 .Bg{
   background: linear-gradient(white, rgb(250, 169, 181), #fef4f4);
 }

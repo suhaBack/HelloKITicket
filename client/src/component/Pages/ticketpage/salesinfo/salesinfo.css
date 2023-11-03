@@ -1,0 +1,68 @@
+.sale-info {
+  border: 1px solid gray;
+  background-color: #fdf7f7;
+  font-family: "DNFBitBitv2";
+  padding: 2vw;
+}
+
+.agency-info {
+  border: 0.2vw solid rgb(226, 48, 74);
+  border-radius: 0.5vw;
+  margin-bottom: 3vw;
+}
+
+.agency-title,
+.product-title {
+  font-size: 3vw;
+  background-color: rgb(240, 70, 95);
+  color: white;
+  padding: 1vw;
+}
+
+.agency-content{
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+
+.table_info {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.col_1 {
+  width: 170px;
+  border: 1px solid gray;
+}
+
+.col_2 {
+  width: 370px;
+  border: 1px solid gray;
+}
+
+.table_tbody tr {
+  height: 45px;
+}
+
+.table_tbody th{
+    text-align: center;
+  border-top: 1px solid rgb(150, 150, 150);
+}
+
+.table_tbody td{
+padding: 1vw;
+  border-top: 1px solid rgb(150, 150, 150);
+}
+
+.table_tbody th {
+  background-color: rgb(255, 211, 211);
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.product-content{
+    width: 100%;
+}
