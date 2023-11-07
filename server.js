@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const morgan = require('morgan');
-const multer = require('multer')
+
 
 const index = path.join(__dirname, 'client/build/index.html')
 const port = process.env.NODE_ENV || '8080';
 
-const userRouter = require('./routes/User');
+// const userRouter = require('./routes/User');
 const eventRouter = require('./routes/Event');
 const loginRouter = require('./routes/Login');
 const ticketRouter = require('./routes/Ticket')
@@ -22,6 +22,9 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 // 이미지 파일이 요청 오면 어디에 저장할건지 지정
+
+const multer = require('multer');
+
 const upload = multer({ 
     storage: multer.diskStorage({ //저장 설정
         destination: function(req, file, cb) { // 어디에 저장할거냐? upload/
@@ -33,14 +36,6 @@ const upload = multer({
     })
 })
 
-app.post('/image', upload.single('image'), (req, res)=>{ 
-  const file = req.file; 
-  console.log("post(/image) file:",file);
-  res.send({ 
-      // imageUrl: "http://localhost:3000/"+file.destination+file.filename
-      imageUrl: "http://localhost:8080/"+file.destination+file.filename //이미지 여기 저장했다 json형식으로 보냄
-  })
-})
 
 // '/upload'경로로 뭔가 요청이오면 여기서 걸리고 upload폴더의 정적 파일을 제공하겠다
 // 예: "/upload/image.jpg")에 액세스하면 Express.js는 "upload" 디렉터리에서 정적 파일을 찾아 제공
@@ -53,7 +48,17 @@ app.use(express.json());
 var cors = require('cors');
 // 브라우저 cors 이슈를 막기 위해 사용(모든 브라우저의 요청을 일정하게 받겠다)
 app.use(cors());
-app.use('/user', userRouter);
+
+
+app.post('/image', upload.single('image'), (req, res)=>{ 
+  const file = req.file; 
+  console.log("post(/image) file:",file);
+  res.send({ 
+      imageUrl: "http://localhost:8080/"+file.destination+file.filename //이미지 여기 저장했다 json형식으로 보냄
+  })
+})
+
+// app.use('/user', userRouter);
 app.use('/event', eventRouter);
 app.use('/login', loginRouter);
 app.use('/newTicket', ticketRouter);

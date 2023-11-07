@@ -2,20 +2,18 @@ import axios from "axios";
 import "./newTicket.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Upload } from 'antd';
+import { API_URL } from "../../config/contansts";
 
 function NewTicket() {
   const navigate = useNavigate();
-  const [image, setimageURL] = useState();
+  const [imageUrl, setImageUrl ] = useState(null);
 
-  const loadImg = (e) => {
-    let value = URL.createObjectURL(e.target.files[0]);
-    setimageURL(value);
-  };
 
   const AddContents = async (e) => {
     e.preventDefault();
 
-    const imageURL = "test"; // C:\fakepath\스크린샷 2023-06-04 031733.png
+    const imageURL = imageUrl; // C:\fakepath\스크린샷 2023-06-04 031733.png
     const title = e.target.contentTitle.value; // asd
     const kind = e.target.contnetKind.value; // 2
     const date = e.target.contentDate.value;
@@ -29,7 +27,7 @@ function NewTicket() {
     console.log("test", imageURL);
 
     await axios
-      .post("/newTicket", {
+      .post(`${API_URL}/newTicket`, {
         title,
         kind,
         price,
@@ -47,6 +45,25 @@ function NewTicket() {
         console.error(err);
       });
   };
+  
+  const onChangeImage = (info) => {
+    // 파일이 업로드 중일 때
+    console.log('new',info.file)
+    if(info.file.status === "uploading"){
+        console.log('업로드중');
+        return;
+    }
+    // 파일이 업로드 완료 되었을 때
+    if(info.file.status === "done") {
+        console.log('성공');
+        const response = info.file.response;
+        const imageUrl = response.imageUrl;
+        // 받은 이미지경로를 imageUrl에 넣어줌
+        setImageUrl(imageUrl);
+    }
+}
+
+
   return (
     <div className="newTicketPage container">
       <div className="mainTitle">티켓등록</div>
@@ -85,19 +102,63 @@ function NewTicket() {
           <input type="number" name="newImage" id="contentMax"></input>
         </div>
         <div className="newTicketinfo">
-          <label>포스터/홍보 이미지</label>
-          <input
-            type="file"
-            name="newImage"
-            id="contentImage"
-            onChange={loadImg}
-          ></input>
+            <Upload name="image" action={`${API_URL}/image`}
+                listType="picture" showUploadList={false} onChange={onChangeImage}>
+                { imageUrl ? <img src={imageUrl} 
+                alt="" width= "200px" height= "200px" /> : 
+                        (<div id="upload-img-placeholder">
+                        <span>이미지를 등록 해주세요.</span>
+                </div>)}    
+            </Upload>
         </div>
         <div className="newticketEditBtn">
           <button type="submit">등록하기</button>
         </div>
       </form>
     </div>
+
+    // <div>
+    //   <Form name="productUpload" onFinish={onSubmit}>
+    //     <Form.Item name="imgUpload"
+    //         label={<div className='upload-label'>상품사진</div>}>
+            
+    //     </Form.Item>
+    //     <Divider/>
+    //     <Form.Item name="seller" 
+    //         label={<div className='upload-label'>판매자명</div>}>
+    //         <Input className="nameUpload" size='large'
+    //         placeholder='판매자 이름을 입력하세요'/>
+    //     </Form.Item>
+    //     <Divider/>
+    //     <Form.Item name="name"
+    //     label={<div className='upload-label'>상품이름</div>}>
+    //         <Input
+    //             className='upload-name'
+    //             size='large'
+    //             placeholder='상품 이름을 입력해주세요'/>
+    //     </Form.Item>
+    //     <Divider/>
+    //     <Form.Item name="price"
+    //     label={<div className='upload-label'>상품가격</div>}>
+    //         <InputNumber defaultValue={0} size="large"/>
+    //     </Form.Item>
+    //     <Divider/>
+    //     <Form.Item name="description"
+    //     label={<div className='upload-label'>상품소개</div>}>
+    //     <Input.TextArea
+    //         size='large'
+    //         id = "product-description"
+    //         maxLength={300}
+    //         placeholder="상품 소개를 적어주세요"
+    //     />
+    //     </Form.Item>
+    //     <Form.Item>
+    //         <Button id="submit-button" size="large" htmlType='submit'>
+    //             상품등록하기
+    //         </Button>
+    //     </Form.Item>
+    //   </Form>
+    // </div>
   );
 }
 
