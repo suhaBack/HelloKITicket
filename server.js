@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const morgan = require('morgan');
+const fs = require('fs')
 
 
 const index = path.join(__dirname, 'client/build/index.html')
@@ -21,7 +22,14 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}));  
 
 app.use(express.static(path.join(__dirname, 'client/build')));
-// 이미지 파일이 요청 오면 어디에 저장할건지 지정
+
+const makeFolder = (dir)=>{
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir)
+  }
+}
+
+makeFolder("upload")
 
 const multer = require('multer');
 
