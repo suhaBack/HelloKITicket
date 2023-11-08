@@ -21,7 +21,7 @@
 
 .Junho_musicalImgBox img {
   width: 100%;
-  height: 25vw;
+  height: 20vw;
 }
 
 .Junho_mainMusicalTitle{
@@ -204,7 +204,7 @@
 
 .musicalCard img {
   width: 100%;
-  height: 23vw;
+  height: 20vw;
   transition: border-radius 0.5s;
 }
 
@@ -222,7 +222,7 @@
 
 .musicalDate {
   padding-top: 0.5vw 0;
-  font-size: 0.9vw;
+  font-size: 0.7vw;
   text-align: center;
   color: rgb(66, 66, 66)
 }

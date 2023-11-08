@@ -13,7 +13,7 @@ function Category() {
         <Link to="/concert" style={{ textDecoration: "none" }}>
           <div className="categoryConcertBox">
             <div className="categortMent">
-              <div className="categortMentTitle">콘서트</div>
+              <div className="categortMentTitle">콘서트1111</div>
               <div className="categortMentContent">
                 환상적인 음악과 열정의 축제<br/>화려한 콘서트에
                 여러분을 초대합니다!

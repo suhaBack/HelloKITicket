@@ -151,8 +151,8 @@ function Concert() {
                   : mainConcert[0].title}
               </div>
               <div className="jsw_mainConcertDetail">
-              {mainConcert[0].content.length > 18
-                  ? `${mainConcert[0].content.substring(0, 18)}...`
+              {mainConcert[0].content.length > 15
+                  ? `${mainConcert[0].content.substring(0, 15)}...`
                   : mainConcert[0].content}
               </div>
             </div>
@@ -195,8 +195,8 @@ function Concert() {
                   ? `${mainConcert[3].title.substring(0, 13)}...`
                   : mainConcert[3].title}
               </div>
-              <div className="jsw_mainConcertDetail">{mainConcert[3].content.length > 18
-                  ? `${mainConcert[3].content.substring(0, 18)}...`
+              <div className="jsw_mainConcertDetail">{mainConcert[3].content.length > 15
+                  ? `${mainConcert[3].content.substring(0, 15)}...`
                   : mainConcert[3].content}</div>
             </div>
           </div>

@@ -132,7 +132,7 @@ const ItemsWrap = styled.div`
 
   img {
     width: 100%;
-    height: 22vw;
+    height: 18vw;
     object-fit: cover;
     border-radius: 5px;
   }

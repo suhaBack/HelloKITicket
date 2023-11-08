@@ -71,10 +71,7 @@ a{
   /* // border: 1px solid #000; */
 
 }
-.table_style_1 thead {
-  border-top: 1px solid #92dbfe;
-  border-bottom: 1px solid #92dbfe;
-}
+
 .table_style_1 thead tr td {
   padding-top: 10px;
   padding-bottom: 10px;

@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1vw;
 }
 
 .mypageProfile i{
@@ -150,7 +151,7 @@
 }
 
 .reservationBox1Intro {
-  padding: 2vw;
+  padding: 1vw;
   font-size: 2vw;
 }
 
@@ -173,7 +174,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   border-left: 0.2vw solid rgb(234, 93, 114);
 }
 

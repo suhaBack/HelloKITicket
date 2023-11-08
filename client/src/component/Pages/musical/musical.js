@@ -140,8 +140,8 @@ function Musical() {
                   : mainMusical[0].title}
               </div>
               <div className="Junho_mainMusicalDetail">
-              {mainMusical[0].content.length > 18
-                  ? `${mainMusical[0].content.substring(0, 18)}...`
+              {mainMusical[0].content.length > 15
+                  ? `${mainMusical[0].content.substring(0, 15)}...`
                   : mainMusical[0].content}
               </div>
             </div>
@@ -184,8 +184,8 @@ function Musical() {
                   ? `${mainMusical[3].title.substring(0, 13)}...`
                   : mainMusical[3].title}
               </div>
-              <div className="Junho_mainMusicalDetail">{mainMusical[3].content.length > 18
-                  ? `${mainMusical[3].content.substring(0, 18)}...`
+              <div className="Junho_mainMusicalDetail">{mainMusical[3].content.length > 15
+                  ? `${mainMusical[3].content.substring(0, 15)}...`
                   : mainMusical[3].content}</div>
             </div>
           </div>
