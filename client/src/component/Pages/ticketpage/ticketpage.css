@@ -66,8 +66,7 @@
 .ps_all {
   padding: 1vw;
   font-family: "DNFBitBitv2";
-
-  background-color: white;;
+  background-color: white;
 }
 
 .hd_poster {
@@ -91,7 +90,6 @@
   vertical-align: baseline;
   background-color: rgb(44, 44, 44);
   width: 100%;
-  
   font-family: "DNFBitBitv2";
 }
 

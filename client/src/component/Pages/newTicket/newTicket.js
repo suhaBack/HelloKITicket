@@ -2,18 +2,17 @@ import axios from "axios";
 import "./newTicket.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Upload } from 'antd';
+import { Upload } from "antd";
 import { API_URL } from "../../config/contansts";
 
 function NewTicket() {
   const navigate = useNavigate();
-  const [imageUrl, setImageUrl ] = useState(null);
-
+  const [imageUrl, setImageUrl] = useState(null);
 
   const AddContents = async (e) => {
     e.preventDefault();
 
-    const imageURL = imageUrl; 
+    const imageURL = imageUrl;
     const title = e.target.contentTitle.value; // asd
     const kind = e.target.contnetKind.value; // 2
     const date = e.target.contentDate.value;
@@ -45,24 +44,23 @@ function NewTicket() {
         console.error(err);
       });
   };
-  
+
   const onChangeImage = (info) => {
     // 파일이 업로드 중일 때
-    console.log('new',info.file)
-    if(info.file.status === "uploading"){
-        console.log('업로드중');
-        return;
+    console.log("new", info.file);
+    if (info.file.status === "uploading") {
+      console.log("업로드중");
+      return;
     }
     // 파일이 업로드 완료 되었을 때
-    if(info.file.status === "done") {
-        console.log('성공');
-        const response = info.file.response;
-        const imageUrl = response.imageUrl;
-        // 받은 이미지경로를 imageUrl에 넣어줌
-        setImageUrl(imageUrl);
+    if (info.file.status === "done") {
+      console.log("성공");
+      const response = info.file.response;
+      const imageUrl = response.imageUrl;
+      // 받은 이미지경로를 imageUrl에 넣어줌
+      setImageUrl(imageUrl);
     }
-}
-
+  };
 
   return (
     <div className="newTicketPage container">
@@ -72,19 +70,44 @@ function NewTicket() {
           <label>프로그램 명</label>
           <input type="text" name="newImage" id="contentTitle"></input>
         </div>
-        <div className="newTicketinfo">
-          <label>분류</label>
-          <select id="contnetKind">
-            <option value={1}>콘서트</option>
-            <option value={2}>뮤지컬</option>
-            <option value={3}>클래식</option>
-            <option value={4}>전시회</option>
-          </select>
+        <div className="newTicketFlexBox">
+          <div className='newTicketFlex1'>
+            <div className="newTicketinfo" style={{margin: 0}}>
+              <label>분류</label>
+              <select id="contnetKind">
+                <option value={1}>콘서트</option>
+                <option value={2}>뮤지컬</option>
+                <option value={3}>클래식</option>
+                <option value={4}>전시회</option>
+              </select>
+            </div>
+            <div className="newTicketinfo">
+              <label>상영 일정</label>
+              <input type="date" name="newImage" id="contentDate"></input>
+            </div>
+          </div>
+          <div className='newTicketFlex2'>
+            <div className="newTicketinfo" style={{margin: 0}}>
+              <Upload
+                name="image"
+                action={`${API_URL}/image`}
+                listType="picture"
+                showUploadList={false}
+                onChange={onChangeImage}
+              >
+                {imageUrl ? (
+                  <img src={imageUrl} alt="" width="200px" height="200px" />
+                ) : (
+                  <div id="upload-img-placeholder">
+                    <i class="fa-regular fa-file-image"></i><br/>
+                    <span>포스터를 등록 해주세요.</span>
+                  </div>
+                )}
+              </Upload>
+            </div>
+          </div>
         </div>
-        <div className="newTicketinfo">
-          <label>상영 일정</label>
-          <input type="date" name="newImage" id="contentDate"></input>
-        </div>
+
         <div className="newTicketinfo">
           <label>위치</label>
           <input type="text" name="newImage" id="contentAddress"></input>
@@ -100,16 +123,6 @@ function NewTicket() {
         <div className="newTicketinfo">
           <label>최대 이용가능 인원</label>
           <input type="number" name="newImage" id="contentMax"></input>
-        </div>
-        <div className="newTicketinfo">
-            <Upload name="image" action={`${API_URL}/image`}
-                listType="picture" showUploadList={false} onChange={onChangeImage}>
-                { imageUrl ? <img src={imageUrl} 
-                alt="" width= "200px" height= "200px" /> : 
-                        (<div id="upload-img-placeholder">
-                        <span>이미지를 등록 해주세요.</span>
-                </div>)}    
-            </Upload>
         </div>
         <div className="newticketEditBtn">
           <button type="submit">등록하기</button>
