@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import axios from "axios";
 import { setCookie, getCookie, removeCookie } from "../../useCookies";
+import { API_URL } from "../config/contansts";
 
 function Header() {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ function Header() {
       return alert("아이디 또는 비밀번호를 입력해주세요");
     } else {
       axios
-        .post("/login", { id, pwd })
+        .post(`${API_URL}/login`, { id, pwd })
         .then(() => {
           console.log("로그인성공");
           setModalIsOpen(false);

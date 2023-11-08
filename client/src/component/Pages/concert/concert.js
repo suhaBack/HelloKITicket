@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./concert.css";
-import concert1 from "./../../Main/images/concert/1.gif";
+import concert1 from "../ticketpage/images/main_hero.png";
 import concert2 from "./../../Main/images/concert/2.jpg";
 import concert3 from "./../../Main/images/concert/3.gif";
 import concert4 from "./../../Main/images/concert/4.gif";
@@ -16,7 +16,18 @@ import jpg8 from "./../../Main/images/concert/8.gif";
 import jpg9 from "./../../Main/images/concert/9.gif";
 import jpg10 from "./../../Main/images/concert/10.gif";
 
+import { useNavigate } from "react-router-dom";
+
+
+
+
 function Concert() {
+  const navigate = useNavigate();
+
+  const ToTicket = ()=>{
+    navigate("/ticketpage");
+  }
+
   let [img, setImg] = useState([
     jpg1,
     jpg2,
@@ -33,9 +44,9 @@ function Concert() {
   let [concert, setConcert] = useState([
     {
       id: 1,
-      title: "타겟",
-      startDate: "2023-10-27",
-      endDate: "2023-11-30",
+      title: "IM HERO",
+      startDate: "2023-10-10",
+      endDate: "2023-11-13",
       location: "서울특별시 송파구",
     },
     {
@@ -131,7 +142,7 @@ function Concert() {
       <div className="concert container">
       <div className='mainTitle'>콘서트</div>
         <div className="jsw_concertGridBox">
-          <div className="jsw_concertImgBox">
+          <div className="jsw_concertImgBox" onClick={ToTicket}>
             <img src={concert1} />
             <div className="jsw_concertContentBox">
               <div className="jsw_mainConcertTitle">

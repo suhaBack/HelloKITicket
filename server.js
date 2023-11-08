@@ -6,12 +6,12 @@ const fs = require('fs')
 
 
 const index = path.join(__dirname, 'client/build/index.html')
-const port = process.env.NODE_ENV || '8080';
+const port = process.env.NODE_ENV || '8000';
 
 // const userRouter = require('./routes/User');
 const eventRouter = require('./routes/Event');
 const loginRouter = require('./routes/Login');
-const ticketRouter = require('./routes/Ticket')
+const ticketRouter = require('./routes/Ticket');
 
 const { sequelize } = require('./models')
 

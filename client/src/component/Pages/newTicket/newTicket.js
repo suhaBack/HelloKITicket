@@ -13,7 +13,7 @@ function NewTicket() {
   const AddContents = async (e) => {
     e.preventDefault();
 
-    const imageURL = imageUrl; // C:\fakepath\스크린샷 2023-06-04 031733.png
+    const imageURL = imageUrl; 
     const title = e.target.contentTitle.value; // asd
     const kind = e.target.contnetKind.value; // 2
     const date = e.target.contentDate.value;
@@ -116,49 +116,6 @@ function NewTicket() {
         </div>
       </form>
     </div>
-
-    // <div>
-    //   <Form name="productUpload" onFinish={onSubmit}>
-    //     <Form.Item name="imgUpload"
-    //         label={<div className='upload-label'>상품사진</div>}>
-            
-    //     </Form.Item>
-    //     <Divider/>
-    //     <Form.Item name="seller" 
-    //         label={<div className='upload-label'>판매자명</div>}>
-    //         <Input className="nameUpload" size='large'
-    //         placeholder='판매자 이름을 입력하세요'/>
-    //     </Form.Item>
-    //     <Divider/>
-    //     <Form.Item name="name"
-    //     label={<div className='upload-label'>상품이름</div>}>
-    //         <Input
-    //             className='upload-name'
-    //             size='large'
-    //             placeholder='상품 이름을 입력해주세요'/>
-    //     </Form.Item>
-    //     <Divider/>
-    //     <Form.Item name="price"
-    //     label={<div className='upload-label'>상품가격</div>}>
-    //         <InputNumber defaultValue={0} size="large"/>
-    //     </Form.Item>
-    //     <Divider/>
-    //     <Form.Item name="description"
-    //     label={<div className='upload-label'>상품소개</div>}>
-    //     <Input.TextArea
-    //         size='large'
-    //         id = "product-description"
-    //         maxLength={300}
-    //         placeholder="상품 소개를 적어주세요"
-    //     />
-    //     </Form.Item>
-    //     <Form.Item>
-    //         <Button id="submit-button" size="large" htmlType='submit'>
-    //             상품등록하기
-    //         </Button>
-    //     </Form.Item>
-    //   </Form>
-    // </div>
   );
 }
 
