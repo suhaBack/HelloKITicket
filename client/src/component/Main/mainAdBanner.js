@@ -1,6 +1,6 @@
 import add from "./images/add.jpg";
 
-function Add() {
+function MainAdBanner() {
   return (
     <div>
       <img
@@ -12,4 +12,4 @@ function Add() {
   );
 }
 
-export default Add;
+export default MainAdBanner;

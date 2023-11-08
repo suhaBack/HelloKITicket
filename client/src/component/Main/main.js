@@ -1,6 +1,6 @@
 import "./main.css";
 import Carousel from "./slider.js";
-import Add from "./add.js";
+import MainAdBanner from "./mainAdBanner.js";
 
 import Category from "./category/categoty.js";
 import UiSelect from "./selcetUiI/selectUI.js";
@@ -21,7 +21,7 @@ function Main() {
           <UiSelect></UiSelect>
         </div>
         <div className="mb-5 container">
-          <Add/>
+          <MainAdBanner/>
         </div>
         <div className="container">
           <Category/>
