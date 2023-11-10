@@ -32,12 +32,12 @@ function Category() {
       english: "Exhibition",
       content: `창의적 예술과 문화의 향연<br />현대 예술의 아름다움을 만나보세요!`,
     },
-  ]);
+  ]); {/* 각 카테고리의 정보가 담긴 state */}
   return (
     <>
-      <div className="categoryTitle">카테고리</div>
-      <div className="categoryGridBox">
-        {category.map((a, i) => {
+      <div className="categoryTitle">카테고리</div> {/* 카테고리 타이틀 */}
+      <div className="categoryGridBox"> {/* 카테고리 그리드 박스 */}
+        {category.map((a, i) => { {/* 맵함수로 각 category 배열안에 정보들 정렬 */}
           return (
             <Link to="/concert" style={{ textDecoration: "none" }} key={i}>
               <div className={'category' + category[i].english +'Box'}>

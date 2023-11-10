@@ -1,6 +1,6 @@
 import add from "./images/add.jpg";
 
-function MainAdBanner() {
+function MainAdBanner() { {/* 광고배너 컴포넌트 */}
   return (
     <div>
       <img

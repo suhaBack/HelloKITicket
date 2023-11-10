@@ -13,7 +13,7 @@ function Expexted() {
       <div className="mainTitle" style={{ fontSize: "2.5vw" }}>
         상영 예정
       </div>
-      <div className="expextedListBox">
+      <div className="expextedListBox"> {/* 상영예정될 공연을 보여주는 리스트 박스 */}
         {images.map((a, i) => {
           return (
             <div className="expextedList">

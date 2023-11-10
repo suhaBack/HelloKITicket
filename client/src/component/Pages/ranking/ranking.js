@@ -38,7 +38,7 @@ function Ranking() {
     <div className="rankingMain container">
       <h1 className="Topic_Name">장르별 실시간 랭킹</h1>
       <h3 className="Today_Rank">{today} 기준 </h3>
-      <div className="Category_Btn_Area">
+      <div className="Category_Btn_Area"> {/* 랭킹 중 어떤 카테고리의 랭킹을 보여줄지 결정하는 버튼 박스*/}
         <button
           className="Category_Btn"
           id="CB1"
@@ -93,8 +93,7 @@ function Ranking() {
         </button>
       </div>
 
-      <div className="rank_top">
-        {/* <h2 className="tit_sub_float" id="rankTopTitle">콘서트/페스티벌</h2> */}
+      <div className="rank_top"> {/* 랭킹정보 영역 */}
         <h2
           className="tit_sub_float"
           id="rankTopTitle"

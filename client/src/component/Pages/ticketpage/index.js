@@ -4,7 +4,7 @@ import Main_Hero from "./images/main_hero.png";
 import ShowInfo from "./showinfo/";
 import SalesInfo from "./salesinfo/";
 
-const TicketPage = () => {
+const TicketPage = () => { {/* 티켓상세정보 페이지 컴포넌트 */}
   const ticketDetails = {
     title: "티켓 정보",
     posterUrl: Main_Hero,
@@ -71,17 +71,17 @@ const TicketPage = () => {
           <button
             className={selectedSection === "공연정보" ? "active" : ""}
             onClick={() => setSelectedSection("공연정보")}
-          >
+          > 
             공연정보
-          </button>
+          </button> {/* 버튼 클릭시 공연정보를 보여줌 */}
           <button
             className={selectedSection === "판매정보" ? "active" : ""}
             onClick={() => setSelectedSection("판매정보")}
           >
             판매정보
-          </button>
+          </button> {/* 버튼 클릭시 판매정보를 보여줌 */}
         </div>
-        {showAdditionalInfo()}
+        {showAdditionalInfo()} {/* 공연정보 또는 판매정보를 보여주는 영역 */}
       </div>
     </div>
   );
