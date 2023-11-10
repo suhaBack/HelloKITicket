@@ -6,6 +6,7 @@ const fs = require('fs')
 
 
 const index = path.join(__dirname, 'client/build/index.html')
+//client부분에서 build를 한 파일을 가져오는 부분
 const port = process.env.NODE_ENV || '8000';
 
 // const userRouter = require('./routes/User');
@@ -27,12 +28,11 @@ const makeFolder = (dir)=>{
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir)
   }
-}
-
+}//현제 폴더에 "upload"폴더가 없는 경우 폴더를 생성해주는 코드
 makeFolder("upload")
 
 const multer = require('multer');
-
+//이미지를 저장하고 불러오기 위한 코드
 const upload = multer({ 
     storage: multer.diskStorage({ //저장 설정
         destination: function(req, file, cb) { // 어디에 저장할거냐? upload/

@@ -13,6 +13,7 @@ router.post('/',async (req,res,next)=>{
     })
     // console.log('test',Ck_pwd.pwd); //db에서 로그인한 id랑 같은 데이터중 비밀번호 가져오기 => asd7584
     if (Ck_pwd === null) {
+      //Ck_pwd = null 은 db에서 아이디로 조회한 값이 없다는 것
       return res.status(400).end();
     }else{
       if (pwd == Ck_pwd.pwd) {
